@@ -1,0 +1,28 @@
+/* navi bar setup for the website */
+
+	.container { position:relative; padding:0 0 0 105px; }
+
+	#sidebar {
+	    position:fixed;
+	    top:0; bottom:0; left:0;
+	    width:100px;
+	    background:#B8DBFF;
+	}
+
+	#item1 { border:1px solid #000;  
+	    margin:0 0 5px 0;
+	}
+	#item2 { border:1px solid #000; 
+	    margin:5px 0 5px 0;
+	}
+	#item3 { border:1px solid #000; 
+	    margin:5px 0 0 0;
+	}
+	#item4 { border:1px solid #000; 
+	    margin:5px 0 0 0;
+	}
+
+	.contact-info {
+     font-size: 10pt;
+     color: #cccccc;
+}
