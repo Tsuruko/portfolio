@@ -15,6 +15,13 @@
 	<body>
 		{{> navbar}}
 
+
+		<div id="myModalImg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-content modal-body">
+				<img id="imgPopup" src="" class="img-responsive">
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="page-header">
 				<h1>CSE169 - Computer Animation</h1> 
@@ -26,20 +33,23 @@
 					<p>Render a character skeleton from a .skel file.  The app allows selection and positioning of joints within the given degrees of freedom in the file.  Each "bone" of the skeleton is represented by a rectangle.  In addition, create a custom .skel file</p>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project1wire.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project1wire.png">
 						<img src="/images/CSE169/project1wire.png" >
 						<p class="imgCaption">render wireframe wasp skeleton</p>
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project1solid.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project1solid.png">
 						<img src="/images/CSE169/project1solid.png" >
 						<p class="imgCaption">render boxframe dragon skeleton</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project1_extra.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project1_extra.png">
 						<img src="/images/CSE169/project1thumb.png">
 						<p class="imgCaption">extra credit 1 - render custom skeleton </p>
 					</a>
@@ -48,13 +58,15 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project2.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project2.png">
 						<img src="/images/CSE169/project2.png">
 						<p class="imgCaption">wasp skin</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project2_extra0.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project2_extra0.png">
 						<img src="/images/CSE169/project2_extra0.png" height="300">
 						<p class="imgCaption">extra credit - texture mapping</p>
 					</a>
@@ -78,13 +90,15 @@
 					<a href="/app_demos/CSE169/animator_win.zip" download><p>windows: animator_win.zip</p></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project2_extra1.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project2_extra1.png">
 						<img src="/images/CSE169/project2_extra1.png" height="300">
 						<p class="imgCaption">extra credit - morph cheek</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project2_extra2.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project2_extra2.png">
 						<img src="/images/CSE169/project2_extra2.png" heght="300">
 						<p class="imgCaption">extra credit - morph eyebrow</p>
 					</a>
@@ -93,12 +107,14 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project3-1.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project3-1.png">">
 						<img src="/images/CSE169/project3-1.png" width="800">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/project3-2.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/project3-2.png">
 						<img src="/images/CSE169/project3-2.png" width="800">
 					</a>
 				</div>
@@ -114,12 +130,14 @@
 					<p>Physics based cloth simulation using the Springs and Particles model.  Has collision detection and wind simulation.  This app allows you the move the cloth around and adjust the wind speed.</p>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/finalProjectSolid.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/finalProjectSolid.png">
 						<img src="/images/CSE169/finalProjectSolid.png" width="800">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE169/finalProjectWire.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE169/finalProjectWire.png">
 						<img src="/images/CSE169/finalProjectWire.png" width="800">
 					</a>
 				</div>
@@ -138,5 +156,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-
+	<!--custom js files -->
+	<script src="/js/portfolio.js"></script>
 </html>

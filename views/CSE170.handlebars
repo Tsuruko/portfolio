@@ -15,6 +15,12 @@
 	<body>
 		{{> navbar}}
 
+		<div id="myModalImg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-content modal-body">
+				<img id="imgPopup" src="" class="img-responsive">
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="page-header">
 				<h1>CSE170 - Human-Computer Interaction</h1> 
@@ -33,7 +39,8 @@
 					<a href="http://feelzapp.herokuapp.com" style="font-size:18pt"><p>Feelz Project Link</p></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/feelz.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/feelz.png">
 						<img src="/images/CSE170/thumbnails/feelz.png">
 					</a>
 				</div>
@@ -41,18 +48,21 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/paper2.jpg" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/paper2.jpg">
 						<img src="/images/CSE170/thumbnails/paper2.jpg">
 					</a>
 				</div>
 
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/paper.jpg" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/paper.jpg">
 						<img src="/images/CSE170/thumbnails/paper.jpg">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/storyboard.jpg" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/storyboard.jpg">
 						<img src="/images/CSE170/storyboard.jpg">
 					</a>
 				</div>
@@ -68,25 +78,29 @@
 					<p>Each week of the course we learned a webprogramming topic, starting from html basics.  We built up into CSS, then Javascript, then using node.js, and handlebars followed by databases using mongoDB.  Each week we updated our development plan and design.  At the end, we also performed user testing and A/B testing using Woopra.</p>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/sidebar1.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/sidebar1.png">
 						<img src="/images/CSE170/thumbnails/sidebar1.png">
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/DevelopmentPlan.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/DevelopmentPlan.png">
 						<img src="/images/CSE170/thumbnails/DevelopmentPlan.png">
 					</a>
 				</div>
 			</div>		
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/FeelzApp_slide.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/FeelzApp_slide.png">
 						<img src="/images/CSE170/FeelzApp_slide.png">
 						<p class="imgCaption">Presentation Slide</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE170/Poster.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE170/Poster.png">
 						<img src="/images/CSE170/thumbnails/Poster.png">
 						<p class="imgCaption">Presentation Poster</p>
 					</a>
@@ -110,5 +124,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-
+	<!--custom js files -->
+	<script src="/js/portfolio.js"></script>
 </html>

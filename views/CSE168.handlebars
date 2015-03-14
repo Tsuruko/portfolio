@@ -15,6 +15,12 @@
 	<body>
 		{{> navbar}}
 
+		<div id="myModalImg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-content modal-body">
+				<img id="imgPopup" src="" class="img-responsive">
+			</div>
+		</div>
+
 		<div class="container">
 			<div class="page-header">
 				<h1>CSE168 Projects - Photo-Realistic Rendering Algorithms</h1> 
@@ -29,13 +35,15 @@
 					-->
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project1.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project1.png">
 						<img src="/images/CSE168/project1.png">
 						<p class="imgCaption">A simple box scene</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project1_extra.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project1_extra.png">
 						<img src="/images/CSE168/project1_extra.png">
 						<p class="imgCaption">extra credit demonstration of spheres, planes, and shadows</p>
 					</a>
@@ -44,7 +52,8 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project2.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project2.png">
 						<img src="/images/CSE168/project2.png">
 						<p class="imgCaption">Project 2 Render Time: ~7 seconds</p>
 					</a>
@@ -74,19 +83,22 @@
 					<p>render multiple derived materials using the Lambert and Ashikhmin models using sampling routines.  Also uses BRDF sampling to generate reflection rays. In addition, add aperture adjustment to the camera and motion blur.</p>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project3.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project3.png">
 						<img src="/images/CSE168/project3.png">
 						<p class="imgCaption">Project 3.  Render Time: ~3 minutes</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project3_extra1.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project3_extra1.png">
 						<img src="/images/CSE168/project3_extra1.png">
 						<p class="imgCaption">extra credit - aperture </br> Render Time: ~17 seconds</p>
 					</a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project3_extra2.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project3_extra2.png">
 						<img src="/images/CSE168/project3_extra2.png">
 						<p class="imgCaption">extra credit - motion blur </br> Render Time: ~4 minutes 20 seconds</p>
 					</a>
@@ -95,7 +107,8 @@
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-3">
-					<a href="/images/CSE168/project4.png" class="thumbnail">
+					<a class="thumbnail" data-toggle="modal" data-target="#myModalImg" onclick="popup(this)"
+						data-imgSrc="/images/CSE168/project4.png">
 						<img src="/images/CSE168/project4.png">
 						<p class="imgCaption">Final scene Render Time: ~35 minutes</p>
 					</a>
@@ -124,5 +137,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-
+	<!--custom js files -->
+	<script src="/js/portfolio.js"></script>
 </html>
