@@ -1,18 +1,24 @@
 <!doctype html>
 
 <html>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">
-					Monica Liu
-				</a>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Monica Liu</a>
 			</div>
 		</div>
-		<ul class="nav navbar-nav navbar-right">
+		<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/">Home</a></li>
 				<li><a href="/projects">Projects</a><li>
 				<li><a href="/contact"  style="margin-right: 20px">Contact</a></li>
-		</ul>
+			</ul>
+		</div>
 	</nav>
 </html>
