@@ -18,36 +18,19 @@
 		<div class="container">
 
 			<div class="page-header">
-				<h1>Projects</h1> 
+				<h1>Projects</h1>
 			</div>
 
-			<div class="row">
-				<div class="col-sm-6 col-md-4">
-					<a href="/project/CSE167" class="thumbnail">
-						<img src="images/thumbnails/CSE167.png">
-						<p>CSE167 - Introduction to Computer Graphics</p>
-					</a>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<a href="/project/CSE168" class="thumbnail">
-						<img src="images/thumbnails/CSE168.png">
-						CSE168 Projects - Rendering Algorithms
-					</a>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<a href="/project/CSE169" class="thumbnail">
-						<img src="images/thumbnails/CSE169.png">
-						CSE169 - Computer Animation
-					</a>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<a href="/project/CSE170" class="thumbnail">
-						<img src="images/thumbnails/CSE170.png">
-						CSE170 - Human-Computer Interaction
-					</a>
-				</div>
-			</div>
-			
+			<h2>General</h2> 
+			{{#each projectsGeneral}}	
+				{{> project}}
+			{{/each}}
+
+
+			<h2>Graphics</h2> 
+			{{#each projectsGraphics}}	
+				{{> project}}
+			{{/each}}
 		</div>
 
 	</body>

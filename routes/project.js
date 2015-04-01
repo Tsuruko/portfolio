@@ -1,3 +1,6 @@
+var projectsGraphics = require('../projectsGraphics.json');
+var projectsGeneral = require('../projectsGeneral.json');
+
 
 exports.viewProject = function(req, res) {
 	var name = req.params.name; 
@@ -5,5 +8,17 @@ exports.viewProject = function(req, res) {
 }
 
 exports.viewProjPage = function(req, res) {
-	res.render('projects');
+	var json = { "projectsGraphics" : projectsGraphics, 
+				 "projectsGeneral" : projectsGeneral
+				};
+	res.render('projects', json);
+}
+
+
+exports.viewProjectSection = function(req, res) {
+	var name = req.params.name; 
+	var section = req.params.section;
+	var url = name + "/" + section;
+	console.log(url);
+	res.render(url);
 }

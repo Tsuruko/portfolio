@@ -1,0 +1,14 @@
+[
+	{
+		"name": "CSE125",
+		"title": " - Software System Design and Implementation",
+		"description": "coming soon.  This project is a group project consisting of 7 people.",
+		"image": "CSE125.png"
+	},
+	{
+		"name": "CSE170",
+		"title": " - Human-Computer Interaction",
+		"description": "FeelzApp is a website designed for mobile devices. The studio prompt for this project was Storytelling, Empathy, and Metaphor. This project focuses on the design process, using storyboards, needfinding, prototyping, and devleopment planning. This project was done in a group of 3.",
+		"image": "CSE170.png"
+	}
+]
