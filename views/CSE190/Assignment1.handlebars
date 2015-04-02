@@ -107,7 +107,7 @@
 					<p>command line example: </br>
 						./image -crop 275 25 120 80 < images/mandrill.bmp > out.bmp
 					</p>
-
+					<p>An error message is printed if x is not between 0 and the image width or if y is not between 0 and the image height</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each crop}}
@@ -125,6 +125,7 @@
 					<p>command line example: </br>
 						./image -quantize 8 < images/shed.bmp > out.bmp
 					</p>
+					<p>An error message is printed if the number of bits is not between 1 and 8</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each quantize}}
@@ -136,11 +137,27 @@
 				<div id="RandomDither">
 					<h4>Image::RandomDither</h4>
 					<p>command line example: </br>
-						./image -quantize 8 < images/shed.bmp > out.bmp
+						./image -randomDither 8 < images/flower.bmp > out.bmp
 					</p>
+					<p>An error message is printed if the number of bits is not between 1 and 8</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
-						{{#each quantize}}
+						{{#each randomDither}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="FloydSteinbergDither">
+					<h4>Image::FloydSteinbergDither</h4>
+					<p>command line example: </br>
+						./image -FloydSteinbergDither 8 < images/shed.bmp > out.bmp
+					</p>
+					<p>An error message is printed if the number of bits is not between 1 and 8</p>
+					<p>I prevent darkening the edges of the image by treating it as a toroidal.  I wrap the last column to the first column, the first column to the last column, and the last row to the first row.</p>
+					<div class="row">		
+						<div class="col-sm-1"></div>	
+						{{#each FloydSteinbergDither}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>

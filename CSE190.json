@@ -88,7 +88,7 @@
 		}
 	],
 	"crop" : [
-			{
+		{
 			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_2.png",
 			"caption": "right eye"
 		},
@@ -102,7 +102,7 @@
 		}
 	],
 	"quantize" : [
-			{
+		{
 			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
 			"caption": "1"
 		},
@@ -124,7 +124,7 @@
 		}
 	],
 	"quantize" : [
-			{
+		{
 			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
 			"caption": "1"
 		},
@@ -144,5 +144,53 @@
 			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.png",
 			"caption": "8"
 		}
+	],
+	"randomDither" : [
+		{
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_1.png",
+			"caption": "1"
+		},
+			{
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_2.png",
+			"caption": "2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_4.png",
+			"caption": "4"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_6.png",
+			"caption": "6"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_8.png",
+			"caption": "8"
+		}
+	],
+	"FloydSteinbergDither" : [
+		{
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_1.png",
+			"caption": "1"
+		},
+			{
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_2.png",
+			"caption": "2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_4.png",
+			"caption": "4"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_6.png",
+			"caption": "6"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_8.png",
+			"caption": "8"
+		}
 	]
+
+
+
+	
 }
