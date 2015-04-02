@@ -45,6 +45,7 @@
 			<div>
 				<h2>Links and Demos</h2>
 				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html"><p>Class Website</p></a>
+				<a href="/app_demos/CSE190/assignment1.zip" download><p>mac: assignment1.zip coming soon</p></a>
 			</div>
 
 			<div id="basicOps">
@@ -165,13 +166,80 @@
 
 			</div> <!-- end Quantization and Dithering -->
 
-			<div>
+			<div id="Convolution">
 				<h3>Basic Convolution and Edge Detection</h3>
-			</div>
 
-			<div>
+				<div id="Blur">
+					<h4>Image::Blur</h4>
+					<p>command line example: </br>
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Blur}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="Sharpen">
+					<h4>Image::Sharpen</h4>
+					<p>command line example: </br>
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Sharpen}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="EdgeDetect">
+					<h4>Image::EdgeDetect</h4>
+					<p>command line example: </br>
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each EdgeDetect}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+			</div> <!-- end Convolution and Edge Detection -->
+
+			<div id="scaleShift">
 				<h3>Antialiased Scale and Shift</h3>
-			</div>
+
+				<div id="Scale">
+					<h4>Image::Scale</h4>
+					<p>command line example: </br>
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Scale}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="Shift">
+					<h4>Image::Shift</h4>
+					<p>command line example: </br>
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Shift}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>				
+
+			</div>  <!-- end Antialiased Scale and Shift -->
 
 			<div>
 				<h3>Fun nonlinear filters</h3>
