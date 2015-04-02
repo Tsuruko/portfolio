@@ -188,6 +188,60 @@
 			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_8.png",
 			"caption": "8"
 		}
+	],
+	"Edges" : [
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.png",
+			"caption": "using the (reflectImg) method, with no dark spots"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19_wrap.png",
+			"caption": "19: using the (wrapImg) method, note the dark spots on top"
+		}
+	],
+	"Blur" : [
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.png",
+			"caption": "3"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.png",
+			"caption": "5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_7.png",
+			"caption": "7"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_11.png",
+			"caption": "11"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.png",
+			"caption": "19"
+		}
+	],
+	"Sharpen" : [
+		{
+			"image": "/images/CSE190/Assignment1/Sharpen/sharpenFilter.png",
+			"caption": "filter provided for sharpening"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Sharpen/flower_Sharpen.png",
+			"caption": "flower"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Sharpen/shed_Sharpen.png",
+			"caption": "shed"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Sharpen/mandrill_Sharpen.png",
+			"caption": "mandrill"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Sharpen/wave_Sharpen.png",
+			"caption": "wave"
+		}
 	]
 
 

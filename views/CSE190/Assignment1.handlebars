@@ -39,13 +39,15 @@
 			<div>
 				<h2>Assignment 1 - Image and Signal Processing</h2>
 				<p>Date: Spring 2015</p>
-				<p>work in progress</p>
+				<p>This assignment is the creation of a basic image proccessing program.  It is like a mini photoshop or photo editor</p>
+				<p>Please note that all images on this website are converted to .png from the .bmp output of the program and thus may have small differences from the program output.</p>
 			</div>
 
 			<div>
 				<h2>Links and Demos</h2>
 				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html"><p>Class Website</p></a>
-				<a href="/app_demos/CSE190/assignment1.zip" download><p>mac: assignment1.zip coming soon</p></a>
+				<a href="/app_demos/CSE190/assignment1_mac.zip" download><p>mac: assignment1_mac.zip coming soon</p></a>
+				<a href="/app_demos/CSE190/assignment1_code.zip" download><p>Source Code: assignment1_code.zip coming soon</p></a>
 			</div>
 
 			<div id="basicOps">
@@ -155,7 +157,6 @@
 						./image -FloydSteinbergDither 8 < images/shed.bmp > out.bmp
 					</p>
 					<p>An error message is printed if the number of bits is not between 1 and 8</p>
-					<p>I prevent darkening the edges of the image by treating it as a toroidal.  I wrap the last column to the first column, the first column to the last column, and the last row to the first row.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each FloydSteinbergDither}}
@@ -166,15 +167,29 @@
 
 			</div> <!-- end Quantization and Dithering -->
 
+			<div id="edges">
+				<h3>Dealing with edges</h3>
+				<p>For all functions needing special cases for the edges, I initally used image wrapping.  I achieved this by using a helper function to calculate a modified index if necessary.</p>
+				<p>The helper function <strong>int wrapImg (int max, int x)</strong> takes the maximum value an index can be and the current index, and returns a modified index if the current index is less than 0 or greater than or equal to the max.  As you can see with the wave image this may not be ideal, since the top of the image is very light and the bottom of the image is very dark. </p>
+				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int x)</strong>, which reflects out of bounds points back into the image.</p>
+				<div class="row">
+					<div class="col-sm-4"></div>
+					{{#each Edges}}
+						{{> assignmentImg }}
+					{{/each}}
+				</div>
+			</div>
+
 			<div id="Convolution">
 				<h3>Basic Convolution and Edge Detection</h3>
 
 				<div id="Blur">
 					<h4>Image::Blur</h4>
 					<p>command line example: </br>
+						./image -blur 11 < images/wave.bmp > out.bmp
 					</p>
-					<p>An error message is printed if the width of the filter is not odd</p>
-					<p>using guassian filters</p>
+					<p>An error message is printed if the width of the filter is not odd.</p>
+					<p>I used the gaussian filter with sigma = floor(n/2.0)/2.0 for blurring.</p>
 
 					<div class="row">
 						<div class="col-sm-1"></div>
@@ -187,7 +202,9 @@
 				<div id="Sharpen">
 					<h4>Image::Sharpen</h4>
 					<p>command line example: </br>
+						./image -sharpen < images/flower.bmp > out.bmp
 					</p>
+					<p>I used the filter provided in the assignment writeup.</p>
 
 					<div class="row">
 						<div class="col-sm-1"></div>
