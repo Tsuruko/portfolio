@@ -1,6 +1,8 @@
 var projectsGraphics = require('../projectsGraphics.json');
 var projectsGeneral = require('../projectsGeneral.json');
 
+var cse190_img = require('../CSE190.json');
+
 
 exports.viewProject = function(req, res) {
 	var name = req.params.name; 
@@ -19,6 +21,6 @@ exports.viewProjectSection = function(req, res) {
 	var name = req.params.name; 
 	var section = req.params.section;
 	var url = name + "/" + section;
-	console.log(url);
-	res.render(url);
+
+	res.render(url, cse190_img);
 }

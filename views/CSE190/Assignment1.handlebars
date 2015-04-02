@@ -47,35 +47,106 @@
 				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html"><p>Class Website</p></a>
 			</div>
 
-			<div>
+			<div id="basicOps">
 				<h3>Basic Operations</h3>
-					<div class="row">
-						<div class="col-sm-3 thumbnail">
-								<a href="images/CSE190/Brighten.png"><img src="images/CSE190/Brighten.png"></a>
-						</div>
-						<div class="col-sm-9">
-							<h4>Image::Brighten</h4>
-							<p>command line example: </br>
-								./image -brightness 1.0 < images/shed.bmp > out.bmp
-							</p>
-						</div>
+				<div id="Brighten">
+					<h4>Image::Brighten</h4>
+					<p>command line example: </br>
+						./image -brightness 1.0 < images/shed.bmp > out.bmp
+					</p>
+					<div class="row">		
+						<div class="col-sm-1"></div>	
+						{{#each brightness}}
+							{{> assignmentImg }}
+						{{/each}}
 					</div>
-					<div class="row">
-						<div class="col-sm-3 thumbnail">
-								<a href="images/CSE190/ChangeContrast.png"><img src="images/CSE190/ChangeContrast.png"></a>
-						</div>
-						<div class="col-sm-9">
-							<h4>Image::ChangeContrast</h4>
-							<p>command line example: </br>
-								./image -contrast 1.0 < images/mandrill.bmp > out.bmp
-							</p>
-						</div>
-					</div>
-			</div>
+				</div>
+				<div id="ChangeContrast">
+					<h4>Image::ChangeContrast</h4>
+					<p>command line example: </br>
+						./image -contrast 1.0 < images/mandrill.bmp > out.bmp
+					</p>
 
-			<div>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each contrast}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+				<div id="ChangeSaturation">
+					<h4>Image::ChangeSaturation</h4>
+					<p>command line example: </br>
+						./image -saturation 1.0 < images/wave.bmp > out.bmp
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each saturation}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="ChangeGamma">
+					<h4>Image::ChangeGamma</h4>
+					<p>command line example: </br>
+						./image -gamma 1 < images/flower.bmp > 1.bmp
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each gamma}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="Crop">
+					<h4>Image::Crop</h4>
+					<p>command line example: </br>
+						./image -crop 275 25 120 80 < images/mandrill.bmp > out.bmp
+					</p>
+
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each crop}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div> 
+			</div> <!-- end basic operations -->
+
+			<div id="Quant_Dith">
+
 				<h3>Quantization and Dithering</h3>
-			</div>
+				<div id="Quantize">
+					<h4>Image::Quantize</h4>
+					<p>command line example: </br>
+						./image -quantize 8 < images/shed.bmp > out.bmp
+					</p>
+					<div class="row">		
+						<div class="col-sm-1"></div>	
+						{{#each quantize}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+				<div id="RandomDither">
+					<h4>Image::RandomDither</h4>
+					<p>command line example: </br>
+						./image -quantize 8 < images/shed.bmp > out.bmp
+					</p>
+					<div class="row">		
+						<div class="col-sm-1"></div>	
+						{{#each quantize}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div>
+
+			</div> <!-- end Quantization and Dithering -->
 
 			<div>
 				<h3>Basic Convolution and Edge Detection</h3>

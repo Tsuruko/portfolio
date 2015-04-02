@@ -1,0 +1,148 @@
+{
+	"brightness" : [
+		{
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_0.png",
+			"caption": "0.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_05.png",
+			"caption": "0.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_1.png",
+			"caption": "1.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_15.png",
+			"caption": "1.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_2.png",
+			"caption": "2.0"
+		}
+	],
+	"contrast" : [
+		{
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_-05.png",
+			"caption": "-0.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_0.png",
+			"caption": "0.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_05.png",
+			"caption": "0.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_1.png",
+			"caption": "1.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_17.png",
+			"caption": "1.7"
+		}
+	],
+	"saturation" : [
+		{
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_-1.png",
+			"caption": "-1.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_0.png",
+			"caption": "0.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_05.png",
+			"caption": "0.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_1.png",
+			"caption": "1.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_25.png",
+			"caption": "2.5"
+		}
+	],
+	"gamma" : [
+		{
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_0.png",
+			"caption": "0.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_05.png",
+			"caption": "0.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_1.png",
+			"caption": "1.0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_15.png",
+			"caption": "1.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_2.png",
+			"caption": "2.0"
+		}
+	],
+	"crop" : [
+			{
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_2.png",
+			"caption": "right eye"
+		},
+			{
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_3.png",
+			"caption": "nose"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_1.png",
+			"caption": "left eye"
+		}
+	],
+	"quantize" : [
+			{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
+			"caption": "1"
+		},
+			{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.png",
+			"caption": "2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.png",
+			"caption": "4"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.png",
+			"caption": "6"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.png",
+			"caption": "8"
+		}
+	],
+	"quantize" : [
+			{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
+			"caption": "1"
+		},
+			{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.png",
+			"caption": "2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.png",
+			"caption": "4"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.png",
+			"caption": "6"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.png",
+			"caption": "8"
+		}
+	]
+}
