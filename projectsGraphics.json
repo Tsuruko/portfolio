@@ -2,7 +2,7 @@
 	{
 		"name": "CSE167",
 		"title": " - Introduction to Computer Graphics",
-		"description": "A program written in C using opengl demonstrating bezier curves, procerdural terrain, complex surface texturing, particle effects, and collision detection algorithms. This project was done in a group of 3.",
+		"description": "A program written in C using opengl demonstrating bezier curves, procedural terrain, complex surface texturing, particle effects, and collision detection algorithms. This project was done in a group of 3.",
 		"image": "CSE167.png"
 	},
 	{
@@ -20,7 +20,7 @@
 			{
 		"name": "CSE190",
 		"title": " - Advanced Computer Graphics",
-		"description": "coming soon.  An overview of animation, modeling, rendering, and imaging in computer graphics.  Topics include Image and Signal Processing, 3D Modeling and Meshes, Real-Time and Precomputation-Based Rendering, Animation and IK, and Imagainc and Computational Photography.",
+		"description": "coming soon.  An overview of animation, modeling, rendering, and imaging in computer graphics.  Topics include Image and Signal Processing, 3D Modeling and Meshes, Real-Time and Precomputation-Based Rendering, Animation and IK, and Imaging and Computational Photography.",
 		"image": "CSE190.png"
 	}
 ]
