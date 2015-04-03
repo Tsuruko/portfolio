@@ -57,6 +57,7 @@
 					<p>command line example: </br>
 						./image -brightness 1.0 < images/shed.bmp > out.bmp
 					</p>
+					<p>Brightness is controlled by scaling the pixels by the inputed factor.  An error message is printed if x is less than 0.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each brightness}}
@@ -66,6 +67,7 @@
 				</div>
 				<div id="ChangeContrast">
 					<h4>Image::ChangeContrast</h4>
+					<p>Contrast is controlled by interpolating the pixels between a grey image of the average image luminance and the original image.  Negative values inverts the image.</p>
 					<p>command line example: </br>
 						./image -contrast 1.0 < images/mandrill.bmp > out.bmp
 					</p>
@@ -82,7 +84,7 @@
 					<p>command line example: </br>
 						./image -saturation 1.0 < images/wave.bmp > out.bmp
 					</p>
-
+					<p>Saturation is controlled by interpolating the pixels between a grey-scale version of the original image and the original image.  Negative values inverts the image hue but keeps the luminance.</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each saturation}}
@@ -96,7 +98,7 @@
 					<p>command line example: </br>
 						./image -gamma 1 < images/flower.bmp > 1.bmp
 					</p>
-
+					<p>Gamma correction adjusts the color of each pixel of the image by the factor.  Values greater than 1 brighten the image and values less than 1 darken it.  An error message is printed if x is less than 0.</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each gamma}}
@@ -110,7 +112,7 @@
 					<p>command line example: </br>
 						./image -crop 275 25 120 80 < images/mandrill.bmp > out.bmp
 					</p>
-					<p>An error message is printed if x is not between 0 and the image width or if y is not between 0 and the image height</p>
+					<p>Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  An error message is printed if x is not between 0 and the image width or if y is not between 0 and the image height</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each crop}}
@@ -218,7 +220,7 @@
 					<h4>Image::EdgeDetect</h4>
 					<p>command line example: </br>
 					</p>
-
+					<p>Edge detection using sobel filters</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each EdgeDetect}}
