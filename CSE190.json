@@ -227,20 +227,20 @@
 			"caption": "filter provided for sharpening"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/flower_Sharpen.png",
-			"caption": "flower"
+			"image": "/images/CSE190/Assignment1/Sharpen/flower.png",
+			"caption": "original flower image"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/shed_Sharpen.png",
-			"caption": "shed"
+			"image": "/images/CSE190/Assignment1/Sharpen/flower_Sharpen.png",
+			"caption": "sharpened flower image"
 		},
 		{
 			"image": "/images/CSE190/Assignment1/Sharpen/mandrill_Sharpen.png",
-			"caption": "mandrill"
+			"caption": "sharpened mandrill image"
 		},
 		{
 			"image": "/images/CSE190/Assignment1/Sharpen/wave_Sharpen.png",
-			"caption": "wave"
+			"caption": "sharpened wave image"
 		}
 	]
 
