@@ -242,6 +242,28 @@
 			"image": "/images/CSE190/Assignment1/Sharpen/wave_Sharpen.png",
 			"caption": "sharpened wave image"
 		}
+	],
+	"EdgeDetect" : [
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.png",
+			"caption": "borders using reflect"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.png",
+			"caption": "borders using in place valid pixel"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_0.png",
+			"caption": "threshold 0"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_100.png",
+			"caption": "threshold 100"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_200.png",
+			"caption": "threshold 200"
+		}
 	]
 
 

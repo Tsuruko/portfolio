@@ -219,8 +219,10 @@
 				<div id="EdgeDetect">
 					<h4>Image::EdgeDetect</h4>
 					<p>command line example: </br>
+						./image -edgeDetect 200 < images/wave.bmp > out.bmp
 					</p>
 					<p>Edge detection using sobel filters</p>
+					<p>The helper function <strong>int reflectImg (int max, int x)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int x)</strong> which instead only uses valid pixels in the image. </p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each EdgeDetect}}
