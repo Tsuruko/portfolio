@@ -40,12 +40,13 @@
 				<h2>Assignment 1 - Image and Signal Processing</h2>
 				<p>Date: Spring 2015</p>
 				<p>This assignment is the creation of a basic image proccessing program.  It is like a mini photoshop or photo editor</p>
-				<p>Please note that all images on this website are converted to .png from the .bmp output of the program and thus may have small differences from the program output.</p>
+				<p>Please note that all images on this website are converted to .jpg from the .bmp output of the program.</p>
 			</div>
 
 			<div>
 				<h2>Links and Demos</h2>
 				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html"><p>Class Website</p></a>
+				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment1.pdf"><p>Assignment Page</p></a>
 				<a href="/app_demos/CSE190/assignment1_mac.zip" download><p>mac: assignment1_mac.zip coming soon</p></a>
 				<a href="/app_demos/CSE190/assignment1_win.zip" download><p>windows: assignment1_win.zip coming soon</p></a>
 			</div>
@@ -57,7 +58,7 @@
 					<p>command line example: </br>
 						./image -brightness 1.0 < images/shed.bmp > out.bmp
 					</p>
-					<p>Brightness is controlled by scaling the pixels by the inputed factor.  An error message is printed if x is less than 0.</p>
+					<p>Brightness is controlled by scaling the pixels by the inputed factor.  The factor must be non-negative.  1.0 preserves the image, 0.0 makes it black, and other factors scale up the pixel values.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each brightness}}
@@ -67,7 +68,7 @@
 				</div>
 				<div id="ChangeContrast">
 					<h4>Image::ChangeContrast</h4>
-					<p>Contrast is controlled by interpolating the pixels between a grey image of the average image luminance and the original image.  Negative values inverts the image.</p>
+					<p>Contrast is controlled by interpolating the pixels between a gray image of the average image luminance and the original image.  A factor of 0.0 outputs the calculated constant gray image, 1.0 gives the original image, and negative values inverts the image.  Values between 0.0 and 1.0 have less contrast, and values greater than 1.0 has higher contrast.</p>
 					<p>command line example: </br>
 						./image -contrast 1.0 < images/mandrill.bmp > out.bmp
 					</p>
@@ -82,9 +83,9 @@
 				<div id="ChangeSaturation">
 					<h4>Image::ChangeSaturation</h4>
 					<p>command line example: </br>
-						./image -saturation 1.0 < images/wave.bmp > out.bmp
+						./image -saturation factor < in.bmp > out.bmp
 					</p>
-					<p>Saturation is controlled by interpolating the pixels between a grey-scale version of the original image and the original image.  Negative values inverts the image hue but keeps the luminance.</p>
+					<p>Saturation is controlled by interpolating the pixels between a gray-scale version of the original image and the original image.  The grayscale image is constructed form the pixel luminance.  Negative values inverts the image hue but keeps the luminance.  A factor of 0.0 outputs the calculated greyscale image, 1.0 preserves the original image, and negative values invert the colors.  Values between 0.0 and 1.0 make the image more gray, and values greater than 1.0 are extrapolated to increase the saturation.</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each saturation}}
@@ -96,9 +97,9 @@
 				<div id="ChangeGamma">
 					<h4>Image::ChangeGamma</h4>
 					<p>command line example: </br>
-						./image -gamma 1 < images/flower.bmp > 1.bmp
+						./image -gamma factor < in.bmp > 1.bmp
 					</p>
-					<p>Gamma correction adjusts the color of each pixel of the image by the factor.  Values greater than 1 brighten the image and values less than 1 darken it.  An error message is printed if x is less than 0.</p>
+					<p>Gamma correction adjusts the color of each pixel of the image by the factor.  The factor must be a postitive number.  A factor of 1.0 preserves the original image, values greater than 1 brighten the image, and values less than 1 darken it. </p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each gamma}}
@@ -110,9 +111,9 @@
 				<div id="Crop">
 					<h4>Image::Crop</h4>
 					<p>command line example: </br>
-						./image -crop 275 25 120 80 < images/mandrill.bmp > out.bmp
+						./image -crop x y w h < in.bmp > out.bmp
 					</p>
-					<p>Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  An error message is printed if x is not between 0 and the image width or if y is not between 0 and the image height</p>
+					<p>Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  x and y are the point to begin cropping from, and w and h are the size of the output cropped image.  The x value must be in the range 0 to width-1(left to right) and y must be in the range 0 to height -1 (top to bottom). All parameters must be postive.</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each crop}}
@@ -125,12 +126,13 @@
 			<div id="Quant_Dith">
 
 				<h3>Quantization and Dithering</h3>
+				<p>For all of the Quantization and Dithering methods the number of bits must be between 1 and 8.</p>
 				<div id="Quantize">
 					<h4>Image::Quantize</h4>
 					<p>command line example: </br>
-						./image -quantize 8 < images/shed.bmp > out.bmp
+						./image -quantize bits < in.bmp > out.bmp
 					</p>
-					<p>An error message is printed if the number of bits is not between 1 and 8</p>
+					<p>For each color channel in the image I first convert the value to a floating point number <i>p</i> between 0 and 1, then use <i>q = floor(p * b)</i>, where <i>b = 2^bits</i>.  I then convert back to the 0-255 range using <i>color = floor(255*q/(b-1))</i>.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each quantize}}
@@ -142,9 +144,9 @@
 				<div id="RandomDither">
 					<h4>Image::RandomDither</h4>
 					<p>command line example: </br>
-						./image -randomDither 8 < images/flower.bmp > out.bmp
+						./image -randomDither bits < in.bmp > out.bmp
 					</p>
-					<p>An error message is printed if the number of bits is not between 1 and 8</p>
+					<p>I then added an option to add random noise to the quantizing function.  THe noise ranges from -0.5 to 0.5, and is added using <i>q = floor(p*b + noise)</i>.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each randomDither}}
@@ -156,9 +158,10 @@
 				<div id="FloydSteinbergDither">
 					<h4>Image::FloydSteinbergDither</h4>
 					<p>command line example: </br>
-						./image -FloydSteinbergDither 8 < images/shed.bmp > out.bmp
+						./image -FloydSteinbergDither bits < in.bmp > out.bmp
 					</p>
-					<p>An error message is printed if the number of bits is not between 1 and 8</p>
+					<p>In this algorithm the error made during quantizing is diffused to other pixels later on using the given weights:</p>
+					<p>Right = 7/16, bottomleft = 3/16, bottom = 5/16, bottomright = 1/16.</p>
 					<div class="row">		
 						<div class="col-sm-1"></div>	
 						{{#each FloydSteinbergDither}}
@@ -172,8 +175,8 @@
 			<div id="edges">
 				<h3>Dealing with edges</h3>
 				<p>For all functions needing special cases for the edges, I initally used image wrapping.  I achieved this by using a helper function to calculate a modified index if necessary.</p>
-				<p>The helper function <strong>int wrapImg (int max, int x)</strong> takes the maximum value an index can be and the current index, and returns a modified index if the current index is less than 0 or greater than or equal to the max.  As you can see with the wave image this may not be ideal, since the top of the image is very light and the bottom of the image is very dark. </p>
-				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int x)</strong>, which reflects out of bounds points back into the image.</p>
+				<p>The helper function <strong>int wrapImg (int max, int idx)</strong> takes the maximum value an index can be and the current index, and returns a modified index if the current index is less than 0 or greater than or equal to the max.  As you can see with the wave image this may not be ideal, since the top of the image is very light and the bottom of the image is very dark. </p>
+				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int idx)</strong>, which reflects out of bounds points back into the image.</p>
 				<div class="row">
 					<div class="col-sm-4"></div>
 					{{#each Edges}}
@@ -188,10 +191,9 @@
 				<div id="Blur">
 					<h4>Image::Blur</h4>
 					<p>command line example: </br>
-						./image -blur 11 < images/wave.bmp > out.bmp
+						./image -blur width < in.bmp > out.bmp
 					</p>
-					<p>An error message is printed if the width of the filter is not odd.</p>
-					<p>I used the gaussian filter with sigma = floor(n/2.0)/2.0 for blurring.</p>
+					<p>The blur kernel width parameter must be an odd integer.  A gaussian filter with the given width is used for discrete convolution with the image.  I set <i>sigma = floor(n/2.0)/2.0</i> as given in the assignment.</p>
 
 					<div class="row">
 						<div class="col-sm-1"></div>
@@ -204,7 +206,7 @@
 				<div id="Sharpen">
 					<h4>Image::Sharpen</h4>
 					<p>command line example: </br>
-						./image -sharpen < images/flower.bmp > out.bmp
+						./image -sharpen < in.bmp > out.bmp
 					</p>
 					<p>I used the filter provided in the assignment writeup.</p>
 
@@ -219,10 +221,10 @@
 				<div id="EdgeDetect">
 					<h4>Image::EdgeDetect</h4>
 					<p>command line example: </br>
-						./image -edgeDetect 200 < images/wave.bmp > out.bmp
+						./image -edgeDetect threshold < in.bmp > out.bmp
 					</p>
 					<p>Edge detection using sobel filters</p>
-					<p>The helper function <strong>int reflectImg (int max, int x)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int x)</strong> which instead only uses valid pixels in the image. </p>
+					<p>The helper function <strong>int reflectImg (int max, int idx)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int idx)</strong> which instead only uses valid pixels in the image. </p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each EdgeDetect}}
@@ -238,12 +240,28 @@
 
 				<div id="Scale">
 					<h4>Image::Scale</h4>
-					<p>command line example: </br>
+					<p>command line examples: </br>
+						./image -sampling 0 -size 10 10 < images/checkerboard.bmp > out.bmp </br>
+						./image -size 10 10 < images/checkerboard.bmp > out.bmp
 					</p>
-
+					<p>Nearest Neighbor:</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
-						{{#each Scale}}
+						{{#each Scale1}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+					<p>Hat Filter:</p>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Scale2}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+					<p>Mitchell Filter:</p>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Scale3}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>

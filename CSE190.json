@@ -1,268 +1,334 @@
 {
 	"brightness" : [
 		{
-			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_0.png",
-			"caption": "0.0"
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_0.jpg",
+			"caption": "factor 0.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_05.png",
-			"caption": "0.5"
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_05.jpg",
+			"caption": "factor 0.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_1.png",
-			"caption": "1.0"
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_1.jpg",
+			"caption": "factor 1.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_15.png",
-			"caption": "1.5"
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_15.jpg",
+			"caption": "factor 1.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_2.png",
-			"caption": "2.0"
+			"image": "/images/CSE190/Assignment1/Brightness/shed_brightness_2.jpg",
+			"caption": "factor 2.0"
 		}
 	],
 	"contrast" : [
 		{
-			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_-05.png",
-			"caption": "-0.5"
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_-05.jpg",
+			"caption": "factor -0.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_0.png",
-			"caption": "0.0"
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_0.jpg",
+			"caption": "factor 0.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_05.png",
-			"caption": "0.5"
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_05.jpg",
+			"caption": "factor 0.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_1.png",
-			"caption": "1.0"
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_1.jpg",
+			"caption": "factor 1.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_17.png",
-			"caption": "1.7"
+			"image": "/images/CSE190/Assignment1/Contrast/mandrill_contrast_17.jpg",
+			"caption": "factor 1.7"
 		}
 	],
 	"saturation" : [
 		{
-			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_-1.png",
-			"caption": "-1.0"
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_-1.jpg",
+			"caption": "factor -1.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_0.png",
-			"caption": "0.0"
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_0.jpg",
+			"caption": "factor 0.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_05.png",
-			"caption": "0.5"
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_05.jpg",
+			"caption": "factor 0.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_1.png",
-			"caption": "1.0"
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_1.jpg",
+			"caption": "factor 1.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_25.png",
-			"caption": "2.5"
+			"image": "/images/CSE190/Assignment1/Saturation/wave_saturation_25.jpg",
+			"caption": "factor 2.5"
 		}
 	],
 	"gamma" : [
 		{
-			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_0.png",
-			"caption": "0.0"
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_0.jpg",
+			"caption": "factor 0.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_05.png",
-			"caption": "0.5"
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_05.jpg",
+			"caption": "factor 0.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_1.png",
-			"caption": "1.0"
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_1.jpg",
+			"caption": "factor 1.0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_15.png",
-			"caption": "1.5"
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_15.jpg",
+			"caption": "factor 1.5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_2.png",
-			"caption": "2.0"
+			"image": "/images/CSE190/Assignment1/Gamma/flower_gamma_2.jpg",
+			"caption": "factor 2.0"
 		}
 	],
 	"crop" : [
 		{
-			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_2.png",
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_2.jpg",
 			"caption": "right eye"
 		},
 			{
-			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_3.png",
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_3.jpg",
 			"caption": "nose"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_1.png",
+			"image": "/images/CSE190/Assignment1/Crop/mandrill_crop_1.jpg",
 			"caption": "left eye"
 		}
 	],
 	"quantize" : [
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
-			"caption": "1"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.jpg",
+			"caption": "nbits 1"
 		},
 			{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.png",
-			"caption": "2"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.jpg",
+			"caption": "nbits 2"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.png",
-			"caption": "4"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.jpg",
+			"caption": "nbits 4"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.png",
-			"caption": "6"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.jpg",
+			"caption": "nbits 6"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.png",
-			"caption": "8"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.jpg",
+			"caption": "nbits 8"
 		}
 	],
 	"quantize" : [
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.png",
-			"caption": "1"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_1.jpg",
+			"caption": "nbits 1"
 		},
 			{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.png",
-			"caption": "2"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_2.jpg",
+			"caption": "nbits 2"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.png",
-			"caption": "4"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_4.jpg",
+			"caption": "nbits 4"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.png",
-			"caption": "6"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_6.jpg",
+			"caption": "nbits 6"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.png",
-			"caption": "8"
+			"image": "/images/CSE190/Assignment1/Quantize/shed_quantize_8.jpg",
+			"caption": "nbits 8"
 		}
 	],
 	"randomDither" : [
 		{
-			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_1.png",
-			"caption": "1"
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_1.jpg",
+			"caption": "nbits 1"
 		},
 			{
-			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_2.png",
-			"caption": "2"
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_2.jpg",
+			"caption": "nbits 2"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_4.png",
-			"caption": "4"
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_4.jpg",
+			"caption": "nbits 4"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_6.png",
-			"caption": "6"
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_6.jpg",
+			"caption": "nbits 6"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_8.png",
-			"caption": "8"
+			"image": "/images/CSE190/Assignment1/RandomDither/flower_RandomDither_8.jpg",
+			"caption": "nbits 8"
 		}
 	],
 	"FloydSteinbergDither" : [
 		{
-			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_1.png",
-			"caption": "1"
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_1.jpg",
+			"caption": "nbits 1"
 		},
 			{
-			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_2.png",
-			"caption": "2"
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_2.jpg",
+			"caption": "nbits 2"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_4.png",
-			"caption": "4"
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_4.jpg",
+			"caption": "nbits 4"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_6.png",
-			"caption": "6"
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_6.jpg",
+			"caption": "nbits 6"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_8.png",
-			"caption": "8"
+			"image": "/images/CSE190/Assignment1/FloydSteinbergDither/shed_FloydSteinbergDither_8.jpg",
+			"caption": "nbits 8"
 		}
 	],
 	"Edges" : [
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.png",
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.jpg",
 			"caption": "using the (reflectImg) method, with no dark spots"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19_wrap.png",
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19_wrap.jpg",
 			"caption": "19: using the (wrapImg) method, note the dark spots on top"
 		}
 	],
 	"Blur" : [
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.png",
-			"caption": "3"
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.jpg",
+			"caption": "width 3"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.png",
-			"caption": "5"
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_5.jpg",
+			"caption": "width 5"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_7.png",
-			"caption": "7"
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_7.jpg",
+			"caption": "width 7"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_11.png",
-			"caption": "11"
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_11.jpg",
+			"caption": "width 11"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.png",
-			"caption": "19"
+			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19.jpg",
+			"caption": "width 19"
 		}
 	],
 	"Sharpen" : [
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/sharpenFilter.png",
+			"image": "/images/CSE190/Assignment1/Sharpen/sharpenFilter.jpg",
 			"caption": "filter provided for sharpening"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/flower.png",
+			"image": "/images/CSE190/Assignment1/Sharpen/flower.jpg",
 			"caption": "original flower image"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/flower_Sharpen.png",
+			"image": "/images/CSE190/Assignment1/Sharpen/flower_Sharpen.jpg",
 			"caption": "sharpened flower image"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/mandrill_Sharpen.png",
+			"image": "/images/CSE190/Assignment1/Sharpen/mandrill_Sharpen.jpg",
 			"caption": "sharpened mandrill image"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/Sharpen/wave_Sharpen.png",
+			"image": "/images/CSE190/Assignment1/Sharpen/wave_Sharpen.jpg",
 			"caption": "sharpened wave image"
 		}
 	],
 	"EdgeDetect" : [
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.png",
-			"caption": "borders using reflect"
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.jpg",
+			"caption": "using reflect"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.png",
-			"caption": "borders using in place valid pixel"
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.jpg",
+			"caption": "using valid pixel"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_0.png",
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_0.jpg",
 			"caption": "threshold 0"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_100.png",
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_100.jpg",
 			"caption": "threshold 100"
 		},
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_200.png",
+			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_200.jpg",
 			"caption": "threshold 200"
+		}
+	],
+	"Scale1" : [
+		{
+			"image": "/images/CSE190/Assignment1/Scale/point/original.jpg",
+			"caption": "original image"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/point/300_300.jpg",
+			"caption": "300 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/point/300_512.jpg",
+			"caption": "300 x 512"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/point/512_300.jpg",
+			"caption": "512 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/point/800_800.jpg",
+			"caption": "800 x 800"
+		}
+	],
+		"Scale2" : [
+		{
+			"image": "/images/CSE190/Assignment1/Scale/hat/original.jpg",
+			"caption": "original image"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/hat/300_300.jpg",
+			"caption": "300 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/hat/300_512.jpg",
+			"caption": "300 x 512"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/hat/512_300.jpg",
+			"caption": "512 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/hat/800_800.jpg",
+			"caption": "800 x 800"
+		}
+	],
+		"Scale3" : [
+		{
+			"image": "/images/CSE190/Assignment1/Scale/mitchell/original.jpg",
+			"caption": "original image"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/mitchell/300_300.jpg",
+			"caption": "300 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/mitchell/300_512.jpg",
+			"caption": "300 x 512"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/mitchell/512_300.jpg",
+			"caption": "512 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Scale/mitchell/800_800.jpg",
+			"caption": "800 x 800"
 		}
 	]
 
