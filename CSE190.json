@@ -197,6 +197,14 @@
 		{
 			"image": "/images/CSE190/Assignment1/Blur/wave_Blur_19_wrap.jpg",
 			"caption": "19: using the (wrapImg) method, note the dark spots on top"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.jpg",
+			"caption": "edge detection: using reflect"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.jpg",
+			"caption": "edge detection: using valid pixels only"
 		}
 	],
 	"Blur" : [
@@ -245,12 +253,12 @@
 	],
 	"EdgeDetect" : [
 		{
-			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_reflect.jpg",
-			"caption": "using reflect"
+			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard_edge_0.jpg",
+			"caption": "threshold 0"
 		},
 		{
 			"image": "/images/CSE190/Assignment1/EdgeDetect/checkerboard2_edge_valid.jpg",
-			"caption": "using valid pixel"
+			"caption": "threshold 0"
 		},
 		{
 			"image": "/images/CSE190/Assignment1/EdgeDetect/wave_edge_0.jpg",

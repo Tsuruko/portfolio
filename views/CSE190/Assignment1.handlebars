@@ -177,8 +177,9 @@
 				<p>For all functions needing special cases for the edges, I initally used image wrapping.  I achieved this by using a helper function to calculate a modified index if necessary.</p>
 				<p>The helper function <strong>int wrapImg (int max, int idx)</strong> takes the maximum value an index can be and the current index, and returns a modified index if the current index is less than 0 or greater than or equal to the max.  As you can see with the wave image this may not be ideal, since the top of the image is very light and the bottom of the image is very dark. </p>
 				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int idx)</strong>, which reflects out of bounds points back into the image.</p>
+				<p>When I implemented edge detection, the helper function <strong>int reflectImg (int max, int idx)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int idx)</strong> which instead only uses valid pixels in the image. </p>
 				<div class="row">
-					<div class="col-sm-4"></div>
+					<div class="col-sm-2"></div>
 					{{#each Edges}}
 						{{> assignmentImg }}
 					{{/each}}
@@ -188,7 +189,7 @@
 			<div id="Convolution">
 				<h3>Basic Convolution and Edge Detection</h3>
 
-				<div id="Blur">
+				<div id="Blur">s
 					<h4>Image::Blur</h4>
 					<p>command line example: </br>
 						./image -blur width < in.bmp > out.bmp
@@ -224,7 +225,6 @@
 						./image -edgeDetect threshold < in.bmp > out.bmp
 					</p>
 					<p>Edge detection using sobel filters</p>
-					<p>The helper function <strong>int reflectImg (int max, int idx)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int idx)</strong> which instead only uses valid pixels in the image. </p>
 					<div class="row">
 						<div class="col-sm-1"></div>
 						{{#each EdgeDetect}}
