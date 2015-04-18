@@ -55,8 +55,8 @@
 				<h3>Basic Operations</h3>
 				<div id="Brighten">
 					<h4>Image::Brighten</h4>
-					<p>command line example: </br>
-						./image -brightness 1.0 < images/shed.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -brightness [factor] < in.bmp > out.bmp
 					</p>
 					<p>Brightness is controlled by scaling the pixels by the inputed factor.  The factor must be non-negative.  1.0 preserves the image, 0.0 makes it black, and other factors scale up the pixel values.</p>
 					<div class="row">		
@@ -69,8 +69,8 @@
 				<div id="ChangeContrast">
 					<h4>Image::ChangeContrast</h4>
 					<p>Contrast is controlled by interpolating the pixels between a gray image of the average image luminance and the original image.  A factor of 0.0 outputs the calculated constant gray image, 1.0 gives the original image, and negative values inverts the image.  Values between 0.0 and 1.0 have less contrast, and values greater than 1.0 has higher contrast.</p>
-					<p>command line example: </br>
-						./image -contrast 1.0 < images/mandrill.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -contrast [factor] < in.bmp > out.bmp
 					</p>
 
 					<div class="row">
@@ -82,8 +82,8 @@
 				</div>
 				<div id="ChangeSaturation">
 					<h4>Image::ChangeSaturation</h4>
-					<p>command line example: </br>
-						./image -saturation factor < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -saturation [factor] < in.bmp > out.bmp
 					</p>
 					<p>Saturation is controlled by interpolating the pixels between a gray-scale version of the original image and the original image.  The grayscale image is constructed form the pixel luminance.  Negative values inverts the image hue but keeps the luminance.  A factor of 0.0 outputs the calculated greyscale image, 1.0 preserves the original image, and negative values invert the colors.  Values between 0.0 and 1.0 make the image more gray, and values greater than 1.0 are extrapolated to increase the saturation.</p>
 					<div class="row">
@@ -96,8 +96,8 @@
 
 				<div id="ChangeGamma">
 					<h4>Image::ChangeGamma</h4>
-					<p>command line example: </br>
-						./image -gamma factor < in.bmp > 1.bmp
+					<p>command line arguments: </br>
+						./image -gamma [factor] < in.bmp > out.bmp
 					</p>
 					<p>Gamma correction adjusts the color of each pixel of the image by the factor.  The factor must be a postitive number.  A factor of 1.0 preserves the original image, values greater than 1 brighten the image, and values less than 1 darken it. </p>
 					<div class="row">
@@ -110,8 +110,8 @@
 
 				<div id="Crop">
 					<h4>Image::Crop</h4>
-					<p>command line example: </br>
-						./image -crop x y w h < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -crop [x] [y] [w] [h] < in.bmp > out.bmp
 					</p>
 					<p>Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  x and y are the point to begin cropping from, and w and h are the size of the output cropped image.  The x value must be in the range 0 to width-1(left to right) and y must be in the range 0 to height -1 (top to bottom). All parameters must be postive.</p>
 					<div class="row">
@@ -129,8 +129,8 @@
 				<p>For all of the Quantization and Dithering methods the number of bits must be between 1 and 8.</p>
 				<div id="Quantize">
 					<h4>Image::Quantize</h4>
-					<p>command line example: </br>
-						./image -quantize bits < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -quantize [bits] < in.bmp > out.bmp
 					</p>
 					<p>For each color channel in the image I first convert the value to a floating point number <i>p</i> between 0 and 1, then use <i>q = floor(p * b)</i>, where <i>b = 2^bits</i>.  I then convert back to the 0-255 range using <i>color = floor(255*q/(b-1))</i>.</p>
 					<div class="row">		
@@ -143,8 +143,8 @@
 
 				<div id="RandomDither">
 					<h4>Image::RandomDither</h4>
-					<p>command line example: </br>
-						./image -randomDither bits < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -randomDither [bits] < in.bmp > out.bmp
 					</p>
 					<p>I then added an option to add random noise to the quantizing function.  THe noise ranges from -0.5 to 0.5, and is added using <i>q = floor(p*b + noise)</i>.</p>
 					<div class="row">		
@@ -157,8 +157,8 @@
 
 				<div id="FloydSteinbergDither">
 					<h4>Image::FloydSteinbergDither</h4>
-					<p>command line example: </br>
-						./image -FloydSteinbergDither bits < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -FloydSteinbergDither [bits] < in.bmp > out.bmp
 					</p>
 					<p>In this algorithm the error made during quantizing is diffused to other pixels later on using the given weights:</p>
 					<p>Right = 7/16, bottomleft = 3/16, bottom = 5/16, bottomright = 1/16.</p>
@@ -191,8 +191,8 @@
 
 				<div id="Blur">s
 					<h4>Image::Blur</h4>
-					<p>command line example: </br>
-						./image -blur width < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -blur [width] < in.bmp > out.bmp
 					</p>
 					<p>The blur kernel width parameter must be an odd integer.  A gaussian filter with the given width is used for discrete convolution with the image.  I set <i>sigma = floor(n/2.0)/2.0</i> as given in the assignment.</p>
 
@@ -206,7 +206,7 @@
 
 				<div id="Sharpen">
 					<h4>Image::Sharpen</h4>
-					<p>command line example: </br>
+					<p>command line arguments: </br>
 						./image -sharpen < in.bmp > out.bmp
 					</p>
 					<p>I used the filter provided in the assignment writeup.</p>
@@ -221,8 +221,8 @@
 
 				<div id="EdgeDetect">
 					<h4>Image::EdgeDetect</h4>
-					<p>command line example: </br>
-						./image -edgeDetect threshold < in.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -edgeDetect [threshold] < in.bmp > out.bmp
 					</p>
 					<p>Edge detection using sobel filters</p>
 					<div class="row">
@@ -240,9 +240,8 @@
 
 				<div id="Scale">
 					<h4>Image::Scale</h4>
-					<p>command line examples: </br>
-						./image -sampling 0 -size 10 10 < images/checkerboard.bmp > out.bmp </br>
-						./image -size 10 10 < images/checkerboard.bmp > out.bmp
+					<p>command line arguments: </br>
+						./image -sampling [type] -size [w] [h] < in.bmp > out.bmp
 					</p>
 					<p>Nearest Neighbor:</p>
 					<div class="row">
@@ -269,7 +268,7 @@
 
 				<div id="Shift">
 					<h4>Image::Shift</h4>
-					<p>command line example: </br>
+					<p>command line arguments: </br>
 					</p>
 
 					<div class="row">
@@ -284,6 +283,11 @@
 
 			<div>
 				<h3>Fun nonlinear filters</h3>
+				<p>command line arguments: </br>
+					./image -fun < in.bmp >out.bmp
+				</p>
+				<p> I decided to implement a swirl effect. 
+				</p>
 			</div>
 
 			<div>
