@@ -338,6 +338,28 @@
 			"image": "/images/CSE190/Assignment1/Scale/mitchell/800_800.jpg",
 			"caption": "800 x 800"
 		}
+	],
+	"Fun" : [
+		{
+			"image": "/images/CSE190/Assignment1/Fun/checkerboard2_fun.jpg",
+			"caption": "original image"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Fun/wave_fun.jpg",
+			"caption": "300 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Fun/shed_fun.jpg",
+			"caption": "300 x 512"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Fun/mandrill_fun.jpg",
+			"caption": "512 x 300"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Fun/flower_fun.jpg",
+			"caption": "800 x 800"
+		}
 	]
 
 

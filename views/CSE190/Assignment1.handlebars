@@ -269,6 +269,7 @@
 				<div id="Shift">
 					<h4>Image::Shift</h4>
 					<p>command line arguments: </br>
+						./image -shift [sx] [sy] < in.bmp >out.bmp
 					</p>
 
 					<div class="row">
@@ -286,8 +287,15 @@
 				<p>command line arguments: </br>
 					./image -fun < in.bmp >out.bmp
 				</p>
-				<p> I decided to implement a swirl effect. 
+				<p> I decided to implement a swirl effect. I use the mitchell filter for anti-aliasing.  I searched for math equations for the swirl effect online and found several different ones.  All of these left black pixels where there were no image pixels to sample, but I instead used my sampling method which uses the wrapping method.  The function I chose to use to transform the pixels is <strong>newX = x*cos(angle) - y*sin(angle) +xcenter</strong> and <strong>newY = x*sin(angle) + y*cos(angle) + ycenter</strong> and <strong>r = (x*x + y*y)</strong> where angle is a function of r.
 				</p>
+
+				<div class="row">
+					<div class="col-sm-1"></div>
+					{{#each Fun}}
+						{{> assignmentImg }}
+					{{/each}}
+				</div>
 			</div>
 
 			<div>
