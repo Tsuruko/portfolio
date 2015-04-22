@@ -339,6 +339,72 @@
 			"caption": "800 x 800"
 		}
 	],
+		"Shift1" : [
+		{
+			"image": "/images/CSE190/Assignment1/Shift/point/1_1.jpg",
+			"caption": "1 x 1"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/point/12_12.jpg",
+			"caption": "1.2 x 1.2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/point/15_15.jpg",
+			"caption": "1.5 x 1.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/point/17_17.jpg",
+			"caption": "1.7 x 1.7"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/point/13_28.jpg",
+			"caption": "1.3 x 2.8"
+		}
+	],
+		"Shift2" : [
+		{
+			"image": "/images/CSE190/Assignment1/Shift/hat/1_1.jpg",
+			"caption": "1 x 1"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/hat/12_12.jpg",
+			"caption": "1.2 x 1.2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/hat/15_15.jpg",
+			"caption": "1.5 x 1.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/hat/17_17.jpg",
+			"caption": "1.7 x 1.7"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/hat/13_28.jpg",
+			"caption": "1.3 x 2.8"
+		}
+	],
+		"Shift3" : [
+		{
+			"image": "/images/CSE190/Assignment1/Shift/mitchell/1_1.jpg",
+			"caption": "1 x 1"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/mitchell/12_12.jpg",
+			"caption": "1.2 x 1.2"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/mitchell/15_15.jpg",
+			"caption": "1.5 x 1.5"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/mitchell/17_17.jpg",
+			"caption": "1.7 x 1.7"
+		},
+		{
+			"image": "/images/CSE190/Assignment1/Shift/mitchell/13_28.jpg",
+			"caption": "1.3 x 2.8"
+		}
+	],
 	"Fun" : [
 		{
 			"image": "/images/CSE190/Assignment1/Fun/checkerboard2_fun.jpg",

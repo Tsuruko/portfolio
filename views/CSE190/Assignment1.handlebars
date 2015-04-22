@@ -271,10 +271,24 @@
 					<p>command line arguments: </br>
 						./image -shift [sx] [sy] < in.bmp >out.bmp
 					</p>
-
+					<p>Nearest Neighbor:</p>
 					<div class="row">
 						<div class="col-sm-1"></div>
-						{{#each Shift}}
+						{{#each Shift1}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+					<p>Hat Filter:</p>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Shift2}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+					<p>Mitchell Filter:</p>
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each Shift3}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
