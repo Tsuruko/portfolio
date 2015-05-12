@@ -1,7 +1,8 @@
 var projectsGraphics = require('../projectsGraphics.json');
 var projectsGeneral = require('../projectsGeneral.json');
 
-var cse190_img = require('../CSE190.json');
+var cse190_1 = require('../CSE190_1.json');
+var cse190_2 = require('../CSE190_2.json');
 
 
 exports.viewProject = function(req, res) {
@@ -22,5 +23,11 @@ exports.viewProjectSection = function(req, res) {
 	var section = req.params.section;
 	var url = name + "/" + section;
 
-	res.render(url, cse190_img);
+	if (section == "Assignment1") {
+		res.render(url, cse190_1);
+	} else {
+		res.render(url, cse190_2);
+	}
+
+
 }

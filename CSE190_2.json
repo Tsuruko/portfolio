@@ -1,0 +1,45 @@
+{
+	"viewer" : [
+		{
+			"image": "/images/CSE190/Assignment2/1.jpg",
+			"caption": "turtle"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/2.jpg",
+			"caption": "cow"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/3.jpg",
+			"caption": "brain"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/4.jpg",
+			"caption": "bunny"
+		}
+	],
+	"decimation" : [
+		{
+			"image": "/images/CSE190/Assignment2/testPatch.jpg",
+			"caption": "original"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/decimation_testPatch.jpg",
+			"caption": "decimation of v(0, 1)"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/plane.jpg",
+			"caption": "original"
+		},
+		{
+			"image": "/images/CSE190/Assignment2/decimation_plane.jpg",
+			"caption": "decimation of v(23, 11)"
+		}
+	],
+	"quadric" : [
+		{
+			"image": "/images/CSE190/Assignment2/quadric/1.jpg",
+			"caption": "coming soon"
+		}
+	]
+	
+}

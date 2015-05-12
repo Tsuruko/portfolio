@@ -47,20 +47,105 @@
 				<a href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html"><p>Class Website</p></a>
 			</div>
 
-			<div id="item1">
+
+			<div id="MeshViewer">
+				<h3>Mesh Viewer</h3>
+				<div id="Controls">
+					<h4>Controls</h4>
+					<ul>
+						<li>Left Mouse click: rotation</li>
+						<li>Right Mouse Click: zoom in and out</li>
+						<li>a and d keys: translate in x direction</li>
+						<li>w and s keys: translate in y direction</li>
+						<li>e and f keys: translate in z direction</li>
+						<li>m key: toggle lighting for debugging</li>
+						<li>c key: turn off and on coloring of models</li>
+					</ul>
+				</div> 
+				<div id="Features">
+					<h4>Features</h4>
+					<ul>
+						<li>loads OFF file types</li>
+						<li>At this point, has a 2 structs for storing the loaded off: vertex(x, y, z) and face(v1, v2, v3).  The mesh is stored in the model class in an array of vertices and an array of faces</li>
+						<li>Randomized coloring of triangles</li>
+						<li>Centering the model in the viewer</li>
+						<!-- need auto-scale/fit on load!!!!!!  -->
+						<li>Computes face normals, then uses averaging for vertex normals</li>
+						<li>In order to store color and normals, I created a vertex class and a Vector3 class with basic vector math operations. The vertex class contains two Vector3's, position and normal.  I also added a triangle class to replace the face struct. I added a Vector3 normal to the triangle class and r g b floats to store the color.</li>
+					</ul>
+				</div> 
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<!-- 3-4 pictures of model viewer with different models -->
+						{{#each viewer}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+			</div> <!-- end mesh viewer -->
+
+			<div id="dataStruct">
+				<h3>Mesh Connectivity and Data Structure</h3>
+				<div id="DataStructure">
+					<h4>Final Data Structure</h4>
+					<p>At this point I switched from using arrays of vertices and faces in the model class to using std::vector of pointers.  This allows me to delete faces and vertices during simplification.  Using pointers also removes the problem of updating indexes when a vertex or face is removed.</p>			
+					<div class="row">
+						<div class="col-sm-1"></div>
+						{{#each crop}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+				</div> 
+				<div id="connectivity">
+					<h4>Connectivity</h4>
+					<p>I changed triangle to contain 3 pointers to vertices and vertex to contain a vector of pointers to triangles for adjacency.  Since the vertices will have varying </p>
+					<p>I added a equals() method to vertex and triangle for edge checking.</p>
+				</div> 
+					<div class="row">
+						<!-- plane and testpatch images here -->
+					<!--
+						<div class="col-sm-1"></div>
+						{{#each crop}}
+							{{> assignmentImg }}
+						{{/each}}
+					-->
+					</div>
+			</div> <!-- end Mesh Connectivity and Data Structure -->
+
+			<div id="meshDecimation">
+				<h3>Mesh Decimation</h3>
+				<p>I have two methods for collapsing the edge, either using the midpoint or using the second point specified.  My collapse vertex() method takes in indices a and b. If midpoint is used, the b with the calculated midpoint.  In both cases, a is the vertex that is deleted at the end.</p>
+				<p>I first check to see if the two vertices have an edge between them by checking if they share any faces.</p>
+				<p>I use the equals() method to determine which faces are shared by the two vertices, and delete those faces from their lists as well as the main model face list.  Once those faces are deleted, I then update faces with vertex pointers to a, replacing them with the midpoint vertex or vertex b.</p>
+				<p>Finally, I delete vertex a.</p>
 				<div class="row">
-					<div class="col-md-4">
-					</div>
-					<div class="col-md-4">
-						<h2></h2>
-						<p></p>
-					</div>
-					<div class="col-md-4">
-					</div>
+					<div class="col-sm-1"></div>
+					<!-- plane and testpatch images here -->
+					{{#each decimation}}
+						{{> assignmentImg }}
+					{{/each}}
 				</div>
+			</div> <!--Mesh Decimation-->
 
-			</div>
+			<div id="QuadricSimplification">
+				<h3>Quadric Simplification</h3>
+				<div id="Controls">
+					<h4>Controls</h4>
+					<ul>
 
+					</ul>
+				</div> 
+				<div id="Features">
+					<h4>Features</h4>
+					<p></p>
+				</div> 
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<!-- 3-4 pictures of model viewer with different models -->
+						{{#each quadric}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+			</div> <!--Quadric Simplification-->
 
 			<div>
 				<p><a href="#">Back to top of page</a> 
