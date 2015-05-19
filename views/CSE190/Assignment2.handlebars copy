@@ -60,12 +60,20 @@
 						<li>e and f keys: translate in z direction</li>
 						<li>m key: toggle lighting for debugging</li>
 						<li>c key: turn off and on coloring of models</li>
+						<li>, key: remove a vertex</li>
+						<li>. key: undo last remove</li>
+						<li>1 key: restore the model to orignal</li>
+						<li>2 key: remove 1000 faces</li>
+						<li>3 key: remove faces until the model is less than 5000 faces</li>
+						<li>4 key: remove faces until the model is less than 1000 faces</li>
+						
 					</ul>
 				</div> 
 				<div id="Features">
 					<h4>Features</h4>
 					<ul>
 						<li>loads OFF file types</li>
+						<li>run the program with meshViewer [filename] to load a specific model.  The default model is the testpatch.off.</li>
 						<li>At this point, has a 2 structs for storing the loaded off: vertex(x, y, z) and face(v1, v2, v3).  The mesh is stored in the model class in an array of vertices and an array of faces</li>
 						<li>Randomized coloring of triangles</li>
 						<li>Centering the model in the viewer</li>
@@ -97,18 +105,8 @@
 				</div> 
 				<div id="connectivity">
 					<h4>Connectivity</h4>
-					<p>I changed triangle to contain 3 pointers to vertices and vertex to contain a vector of pointers to triangles for adjacency, since the vertices will have varying numbers of adjacent faces.</p>
-					<p>I added a equals() method to vertex and triangle for edge checking.</p>
+					<p>Triangle contains 3 ints which specify the indexes of the vertices in the vertices vector.  The vertex class contains a vector of ints specifying the indexes of the faces in the triangles vector, since the vertices will have varying numbers of adjacent faces.  Both classes have a int myId which corresponds to its index. </p>
 				</div> 
-					<div class="row">
-						<!-- plane and testpatch images here -->
-					<!--
-						<div class="col-sm-1"></div>
-						{{#each crop}}
-							{{> assignmentImg }}
-						{{/each}}
-					-->
-					</div>
 			</div> <!-- end Mesh Connectivity and Data Structure -->
 
 			<div id="meshDecimation">
@@ -128,11 +126,9 @@
 
 			<div id="QuadricSimplification">
 				<h3>Quadric Simplification</h3>
-				<div id="Controls">
-					<h4>Controls</h4>
-					<ul>
-
-					</ul>
+				<div id="dataStructs">
+					<h4>Data Structures</h4>
+					<p>At this point I added a symmetricMatrix class to my program, which stores the Quadric matrix as 10 floats.  I added basic operations to this class including addition, determinant, and error calculation with a Vector3.  I added a symmetrix Matrix Q to the Vertex class. </p>
 				</div> 
 				<div id="Features">
 					<h4>Features</h4>
@@ -146,6 +142,45 @@
 						{{/each}}
 					</div>
 			</div> <!--Quadric Simplification-->
+
+			<div id="ProgressiveMesh">
+				<h3>Progressive Meshes</h3>
+				<div id="dataStructs">
+					<h4>In Memory</h4>
+					<p>I first implemented this in memory using two vectors, a vector of the removed faces and a vector of the removed vertices.  I used these to recreate the faces and vertices at the specified indexes from the myId field.</p>
+				</div> 
+				<div id="Features">
+					<h4>From file</h4>
+					<p>Once the algorithm was working in memory, I switched to writing the removed faces and vertices to a file in the following format: </p>
+					<p>
+						added_vert id 				<br>
+						vert id1				<br>
+						posX posY posZ				<br>
+						normX normY normZ				<br>
+						adjacent_faces_size				<br>
+						face1_id face2_id...				<br>
+						vert id2				<br>
+						posX posY posZ				<br>
+						normX normY normZ				<br>
+						adjacent_faces_size				<br>
+						face1_id face2_id...				<br>
+						num_faces_removed				<br>
+						face id1				<br>
+						r b g				<br>
+						v1 v2 v3				<br>
+						normX normY normZ				<br>
+						face id2				<br>
+						...
+					</p>
+				</div> 
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<!-- 3-4 pictures of model viewer with different models -->
+						{{#each quadric}}
+							{{> assignmentImg }}
+						{{/each}}
+					</div>
+			</div> <!--Progressive Meshes-->
 
 			<div>
 				<p><a href="#">Back to top of page</a> 
