@@ -1,3 +1,1 @@
-<?php include_once("home.html"); ?>
-
-<!--test auto deploy heroku-->
+header('Location: '.$https://liumonac.github.io/);
