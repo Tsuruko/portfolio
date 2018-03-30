@@ -1,1 +1,1 @@
-header('Location: '.$https://liumonac.github.io/);
+<?php header( 'Location: /https://liumonac.github.io/' ) ;  ?>
