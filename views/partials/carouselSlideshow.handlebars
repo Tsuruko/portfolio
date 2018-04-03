@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+	<div class="mediaSpacing">
+		<div id="{{slidesId}}" class="carousel limitSize slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				{{#each pictures}}
+					{{#if active}}
+						<li data-target="#{{slidesId}}" data-slide-to="{{@index}}" class="active"></li>
+					{{else}}
+						<li data-target="#{{slidesId}}" data-slide-to="{{@index}}"></li>
+					{{/if}}
+				{{/each}}
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				{{#each pictures}}
+					{{> carouselItem }}
+				{{/each}}
+			</div>
+			
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#{{slidesId}}" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#{{slidesId}}" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</html>

@@ -1,35 +1,223 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name-"viewport" content-"width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<title>Monica Liu</title>
-		<!-- bootstrap css files -->
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-		<!-- custom css files -->
-		<link href="/css/portfolio.css" rel="stylesheet">
+
+		<!-- social media icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Latest compiled and minified CSS Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="/css/portfolio.css">
+		<link rel="stylesheet" href="/css/sidebar.css">
+
 	</head>
-
 	<body>
-		{{> navbar}}
 
-		<div class="container">
-			<div class="page-header">
-				<h1>Monica Liu</h1> 
-				<p>I graduated from UCSD with a BS in computer science and a minor in Interdisciplinary Computing and Arts (ICAM). I am interested in Computer Graphics, Computer Vision, and Software.</p>
-				<p>My hobbies include hiking, skiing, dancing, and cosplay.</p>
+		<!-- Navigation Bar Holder -->
+		<nav id="navbar" class="sideBarContainer">
+			<div id="sideHeader" class="sidebar-header">
+				<h3>Monica Liu</h3>
 			</div>
+
+			<div id="topHeader" class="navbar-header">
+				<button id="menucollapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Monica Liu</a>
+			</div>
+
+			<div id="optionsList">
+				<ul id="optionsListType" class="list-unstyled components">
+					<li class="menuOption active">
+						<a href="#content">Home</a>
+					</li>
+					<li class="menuOption">
+						<a href="#about">About</a>
+					</li>
+				<!--
+					<li class="menuOption">
+						<a href="#Work">Work Experience</a>
+					</li>
+				-->
+					<li class="menuOption">
+						<a id="subMenuToggle" href="#projects" data-toggle="collapse" data-target="#projSubMenu" aria-expanded="false">Projects</a>
+						<ul id="projSubMenu" class="collapse list-unstyled components">
+							<li class="subOption"><a href="#acg">Advanced Computer Graphics</a></li>
+							<li class="subOption"><a href="#bb">Battle Blocks</a></li>
+							<li class="subOption"><a href="#animation">Computer Animation</a></li>
+							<li class="subOption"><a href="#fa">FeelzApp</a></li>
+							<li class="subOption"><a href="#render">Photo-Realistic Rendering</a></li>
+							<li class="subOption lastli"><a href="#km">Kart Mania</a></li>
+						</ul>
+					</li>
+					<li class="menuOption">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- End Navigation Bar Holder -->
+
+		<!-- Page Content Holder -->
+		<div id="content" class="pageContent">
+			<h2>Welcome</h2>
+			<p>This website was built using:</p>
+			<ul class="tags">
+				<li>Node.js</li>
+				<li>Express</li>
+				<li>Handlebars</li>
+				<li>JSON</li>
+				<li>Javascript</li>
+				<li>HTML</li>
+				<li>CSS</li>
+			</ul>
+
+			<div id="about" class="line"></div>
+			<h2 >About</h2>
+			<p>I am a software engineer located in SLC, UT</p>
+			<p>I graduated from UCSD with a BS in computer science and a minor in Interdisciplinary Computing and Arts (ICAM).</p>
+
+		<!--<div  id="Work" class="line"></div>
+			<h2>Work Experience</h2>
+				<h3>Software Engineer at Theradoc</h3>
+				<p>
+					Date: June 2015 - Present
+				</p>
+				<ul class="tags">
+					<li>PL/SQL</li>
+					<li>HL7</li>
+				</ul>
+			<a class="btn btn-primary" href="http://www.theradoc.com/" role="button" target="_blank">Website</a>
+		-->
+			<div id="projects" class="line"></div>
+			<h2>Projects</h2>
+
+				<h3 id="acg"> Advanced Computer Graphics </h3>
+				{{#with projectsList.CSE190_2}}
+					{{> project}}
+				{{/with}}
+
+				<div class="mediaSpacing">
+					<a class="btn btn-primary" href="/downloads/CSE190_1.zip" role="button">Project 1 Download for MacOS</a>
+					<a class="btn btn-primary" href="/CSE190/Assignment1" role="button">Project 1 Report</a>
+					<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment1.pdf" role="button" target="_blank">Assignment 1 Prompt</a>
+				</div>
+				{{#with projectImages.CSE190_2}}
+					{{> carouselSlideshow}}
+				{{/with}}
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe src="https://www.youtube.com/embed/KMyx-bjkRng" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="mediaSpacing">
+					<a class="btn btn-primary" href="https://cse190ennuma.weebly.com/project-2.html" role="button" target="_blank">Project 2 Report</a>
+					<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment2.pdf" role="button" target="_blank">Assignment 2 Prompt</a>
+				</div>
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/pQwTca8NIp8" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<a class="btn btn-primary" href="/downloads/CSE190_final.zip" role="button">Final Project Download for MacOS</a>
+				<a class="btn btn-primary" href="https://cse190ennuma.weebly.com/final-project.html" role="button" target="_blank">Final Project Report</a>
+				<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/190.html" role="button" target="_blank">Class Website</a>
+
+				<h3 id="bb"> Battle Blocks </h3>
+				{{#with projectsList.CSE125}}
+					{{> project}}
+				{{/with}}
+
+				{{#with projectImages.CSE125}}
+					{{> carouselSlideshow}}
+				{{/with}}
+				<a class="btn btn-primary" href="https://www.youtube.com/watch?v=y--bGuVPwS8#t=1231s" role="button" target="_blank">Project Demo</a>
+				<a class="btn btn-primary" href="https://cse125.ucsd.edu/2015/cse125g1/" role="button" target="_blank">Project Website</a>
+				<a class="btn btn-primary" href="https://cse125.ucsd.edu/" role="button" target="_blank">Class Website</a>
+
+
+				<h3 id="animation"> Computer Animation </h3>
+				{{#with projectsList.CSE169}}
+					{{> project}}
+				{{/with}}
+
+				{{#with projectImages.CSE169}}
+					{{> carouselSlideshow}}
+				{{/with}}
+				<div class="mediaSpacing">
+					<div class="responsiveVideo">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/taWsCTBPYhU" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+				<a class="btn btn-primary" href="/downloads/animator_win.zip" role="button">Download for Windows</a>
+				<a class="btn btn-primary" href="/downloads/animator_mac.zip" role="button">Download for MacOS</a>
+				<a class="btn btn-primary" href="/downloads/animator_linux.zip" role="button">Download for Linux</a>
+				<a class="btn btn-primary" href="http://graphics.ucsd.edu/courses/cse169_w15/index.html" role="button" target="_blank">Class Website</a>
+
+				<h3 id="fa"> FeelzApp </h3>
+				{{#with projectsList.CSE170}}
+					{{> project}}
+				{{/with}}
+
+				{{#with projectImages.CSE170}}
+					{{> carouselSlideshow}}
+				{{/with}}
+				<a class="btn btn-primary" href="http://feelzapp.herokuapp.com/" role="button" target="_blank">Project Demo</a>
+				<a class="btn btn-primary" href="http://d.ucsd.edu/class/intro-hci/2015/index.html" role="button" target="_blank">Class Website</a>
+
+				<h3 id="render"> Photo-Realistic Rendering Algorithms </h3>
+				{{#with projectsList.CSE168}}
+					{{> project}}
+				{{/with}}
+
+				{{#with projectImages.CSE168}}
+					{{> carouselSlideshow}}
+				{{/with}}
+				<a class="btn btn-primary" href="/downloads/CSE168_win.zip" role="button">Download for Windows</a>
+				<a class="btn btn-primary" href="/downloads/CSE168_mac.zip" role="button">Download for MacOS</a>
+				<a class="btn btn-primary" href="/downloads/CSE168_linux.zip" role="button">Download for Linux</a>
+				<a class="btn btn-primary" href="https://cse168projectsp2014.wordpress.com/" role="button" target="_blank">Project 4 Report</a>
+				<a class="btn btn-primary" href="http://graphics.ucsd.edu/courses/cse168_s14/" role="button" target="_blank">Class Website</a>
+
+
+				<h3 id="km">Kart Mania</h3>
+				{{#with projectsList.CSE168}}
+					{{> project}}
+				{{/with}}
+
+				{{#with projectImages.CSE167}}
+					{{> carouselSlideshow}}
+				{{/with}}
+
+				<a class="btn btn-primary" href="/downloads/kart_mania_macOS.zip" role="button">Download for MacOS</a>
+				<a class="btn btn-primary" href="/downloads/kart_mania_linux.zip" role="button">Download for Linux</a>
+				<a class="btn btn-primary" href="https://cse167project.wordpress.com/" role="button" target="_blank">Project Report</a>
+				<a class="btn btn-primary" href="http://ivl.calit2.net/wiki/index.php/CSE167Fall2013" role="button" target="_blank">Class Website</a>
+
+			<div id="contact" class="line"></div>
+			<footer class="w3-container">
+				<p style="color:white">Contact</p>
+				<a href="mailto:liu.mona.c@gmail.com?Subject=Contact%20from%20Website" class="fa fa-google"></a>
+				<a href="https://www.linkedin.com/in/monica-mona-liu-b96b0766" class="fa fa-linkedin" target="_blank"></a>
+				<a href="https://github.com/liumonac" class="fa fa-github" target="_blank"></a>
+			</footer>
 		</div>
 
 	</body>
 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<!--custom js files -->
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script src="/js/portfolio.js"></script>
 </html>

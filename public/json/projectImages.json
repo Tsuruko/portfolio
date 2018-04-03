@@ -1,0 +1,312 @@
+{
+	"CSE190_2" : {
+		"slidesId": "acgSlides",
+		"pictures": [
+			{
+				"active" : false,
+				"image": "images/CSE190/Assignment2/test.jpg",
+				"image_name": "test.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Oirginal"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE190/Assignment2/test1.jpg",
+				"image_name": "test1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Simplified"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE190/Assignment2/plane1.jpg",
+				"image_name": "plane1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Oirginal"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE190/Assignment2/plane2.jpg",
+				"image_name": "plane2.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Simplified"
+			},
+			{
+				"active" : true,
+				"image": "images/CSE190/Assignment2/teapotfull.jpg",
+				"image_name": "teapotfull.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Oirginal"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE190/Assignment2/teapotp.jpg",
+				"image_name": "teapotp.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Mesh Decimation",
+				"caption": "Quadratic Simplification: Simplified"
+			}
+		]
+	},
+	"CSE125" : {
+		"slidesId": "bbSlides",
+		"pictures": [
+			{
+				"active" : true,
+				"image": "images/CSE125/mainmenu.jpg",
+				"image_name": "mainmenu.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/help.jpg",
+				"image_name": "help.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/buildmode.jpg",
+				"image_name": "buildmode.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/1.jpg",
+				"image_name": "1.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/2.jpg",
+				"image_name": "2.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/3.jpg",
+				"image_name": "3.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/4.jpg",
+				"image_name": "4.jpg",
+				"hasCaption": false
+			},
+			{
+				"active" : false,
+				"image": "images/CSE125/5.jpg",
+				"image_name": "5.jpg",
+				"hasCaption": false
+			}
+		]
+	},
+	"CSE169" : {
+		"slidesId": "animationSlides",
+		"pictures": [
+			{
+				"active" : false,
+				"image": "images/CSE169/project1wire.jpg",
+				"image_name": "project1wire.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 1: Skeleton",
+				"caption": "Render the scene from a provided .skel file"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project1solid.jpg",
+				"image_name": "project1solid.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 1: Skeleton",
+				"caption": "Render the scene from a provided .skel file"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project1extra.jpg",
+				"image_name": "project1extra.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 1: Skeleton",
+				"caption": "Extra Credit: Create a custom .skel file"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project2.jpg",
+				"image_name": "project2.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Skinning",
+				"caption": "Load a character skin from a .skin file and bind it to a matching .skel file using the smooth skinning algorithm. This program allows you to adjust the skinned character using the same adjustments as the skeleton project."
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project2_extra0.jpg",
+				"image_name": "project2_extra0.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Skinning",
+				"caption": "Extra Credit: Texture mapping"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project2_extra1.jpg",
+				"image_name": "project2_extra1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Skinning",
+				"caption": "Extra Credit: Morphing (cheek)"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project2_extra2.jpg",
+				"image_name": "project2_extra2.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Skinning",
+				"caption": "Extra Credit: Morphing (Eyebrow)"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/project3_1.jpg",
+				"image_name": "project3_1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 3: Keyframe Animation",
+				"caption": "Animate a character skeleton using a .anim file.each joint.  anim file specifies the channels which correspond with a joint in the skeleton and its keyframes. In addition, this app displays the channels for each joint"
+			},
+			{
+				"active" : true,
+				"image": "images/CSE169/finalProjectSolid.jpg",
+				"image_name": "finalProjectSolid.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 4: Cloth Simulation",
+				"caption": "Physics based cloth simulation using the Springs and Particles model. Has collision detection and wind simulation."
+			},
+			{
+				"active" : false,
+				"image": "images/CSE169/finalProjectWire.jpg",
+				"image_name": "finalProjectWire.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 4: Cloth Simulation",
+				"caption": "This app allows you the move the cloth around and adjust the wind speed."
+			}
+		]
+	},
+	"CSE170" : {
+		"slidesId": "faSlides",
+		"pictures": [
+			{
+				"active" : false,
+				"image": "images/CSE170/storyboard1.jpg",
+				"image_name": "storyboard1.jpg",
+				"hasCaption": true,
+				"caption_header": "StoryBoard and Prototyping"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE170/development1.jpg",
+				"image_name": "development1.jpg",
+				"hasCaption": true,
+				"caption_header": "Product Development"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE170/advert3.jpg",
+				"image_name": "advert3.jpg",
+				"hasCaption": true,
+				"caption_header": "Advertising"
+			},
+			{
+				"active" : true,
+				"image": "images/CSE170/advert2.jpg",
+				"image_name": "advert2.jpg",
+				"hasCaption": true,
+				"caption_header": "Advertising"
+			}
+		]
+	},
+	"CSE168" : {
+		"slidesId": "renderSlides",
+		"pictures": [
+			{
+				"active" : false,
+				"image": "images/CSE168/project1.jpg",
+				"image_name": "project1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 1: Basic Ray Tracer",
+				"caption": "Create simple rectangle and plane objects"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project1_extra.jpg",
+				"image_name": "project1_extra.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 1: Basic Ray Tracer",
+				"caption": "Extra Credit: Add spheres and cast shadows"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project2.jpg",
+				"image_name": "project2.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 2: Spatial Data Structures",
+				"caption": "Complex scene using AABB box tree"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project3.jpg",
+				"image_name": "project3.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 3: Materials and Textures",
+				"caption": "Lambert and Ashikhmin models using sampling routines and BRDF sampling for reflection rays (render time: 3min)"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project3_extra1.jpg",
+				"image_name": "project3_extra1.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 3: Materials and Textures",
+				"caption": "Extra Credit: Add aperture"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project3_extra2.jpg",
+				"image_name": "project3_extra2.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 3: Materials and Textures",
+				"caption": "Extra Credit: Add motion blur (render time: 4min 20s)"
+			},
+			{
+				"active" : false,
+				"image": "images/CSE168/project4.jpg",
+				"image_name": "project4.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 4: Procedural Textures",
+				"caption": "Beer Lambert Law"
+			},
+			{
+				"active" : true,
+				"image": "images/CSE168/project4_final.jpg",
+				"image_name": "project4_final.jpg",
+				"hasCaption": true,
+				"caption_header": "Project 4: Procedural Textures",
+				"caption": "Perlin and Worley Noise Textures (render time: 35min)"
+			}
+		]
+	},
+	"CSE167" : {
+		"slidesId": "kmslides",
+		"pictures": [
+			{
+				"active": false,
+				"image": "images/CSE167/terrain.jpg",
+				"image_name": "terrain.jpg",
+				"hasCaption": false
+			},
+			{
+				"active": true,
+				"image": "images/CSE167/crash.jpg",
+				"image_name": "crash.jpg",
+				"hasCaption": false
+			}
+		]
+	}
+}

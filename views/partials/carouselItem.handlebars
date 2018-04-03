@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html>
+
+	{{#if active}}
+		<div class="item active">
+	{{else}}
+		<div class="item">
+	{{/if}}
+
+			<img src="{{image}}" alt="{{image_name}}">
+
+			{{#if hasCaption}}
+				<div class="carousel-caption d-none d-md-block">
+					<h3>{{caption_header}}</h3>
+					<p>{{caption}}</p>
+				</div>
+			{{/if}}
+
+	</div>
+</html>
