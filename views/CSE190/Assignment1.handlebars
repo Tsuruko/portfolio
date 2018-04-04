@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -18,52 +18,11 @@
 		<link rel="stylesheet" href="/css/sidebar.css">
 	</head>
 
-
 	<body>
-
 		<!-- Navigation Bar Holder -->
-		<nav id="navbar" class="sideBarContainer">
-			<div id="sideHeader" class="sidebar-header">
-				<h3>Image and Signal Processing</h3>
-			</div>
-
-			<div id="topHeader" class="navbar-header">
-				<button id="menucollapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Image and Signal Processing</a>
-			</div>
-
-			<div id="optionsList">
-				<ul id="optionsListType" class="list-unstyled components">
-					<li class="menuOption">
-						<a href="#topofpage">Report Home</a>
-					</li>
-					<li class="menuOption active">
-						<a href="#basicOps">Basic Operations</a>
-					</li>
-					<li class="menuOption">
-						<a href="#Quant_Dith">Quantization and Dithering</a>
-					</li>
-					<li class="menuOption">
-						<a href="#Conv_Edge">Basic Convolution and Edge Detection</a>
-					</li>
-					<li class="menuOption">
-						<a href="#scaleShift">Antialiased Scale and Shift</a>
-					</li>
-					<li class="menuOption lastli">
-						<a href="#funNonlinear">Fun nonlinear filters</a>
-					</li>
-				</ul>
-
-                <ul class="list-unstyled CTAs">
-                    <li><a href="/" class="mainPage">Back to Main Page</a></li>
-                </ul>
-			</div>
-		</nav>
+		{{#with CSE190_1_desc}}
+			{{> navbar}}
+		{{/with}}
 		<!-- End Navigation Bar Holder -->
 
 		<!-- Page Content Holder -->
@@ -91,69 +50,54 @@
 			<div id="basicOps" class="line"></div>
 				<h3>Basic Operations</h3>
 				<div id="Brighten">
-					<h4>Image::Brighten</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -brightness [factor] < in.bmp > out.bmp </i> 
-					</p>
-					<p>Brightness is controlled by scaling the pixels by the inputed factor.  The factor must be non-negative.  1.0 preserves the image, 0.0 makes it black, and other factors scale up the pixel values.</p>
+					{{#with CSE190_1_desc.Brighten}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">		
-						{{#each brightness}}
+						{{#each CSE190_1_img.brightness}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 				<div id="ChangeContrast">
-					<h4>Image::ChangeContrast</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -contrast [factor] < in.bmp > out.bmp </i> 
-					</p>
-					<p>Contrast is controlled by interpolating the pixels between a gray image of the average image luminance and the original image.  A factor of 0.0 outputs the calculated constant gray image, 1.0 gives the original image, and negative values inverts the image.  Values between 0.0 and 1.0 have less contrast, and values greater than 1.0 has higher contrast.</p>
+					{{#with CSE190_1_desc.ChangeContrast}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each contrast}}
+						{{#each CSE190_1_img.contrast}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="ChangeSaturation">
-					<h4>Image::ChangeSaturation</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -saturation [factor] < in.bmp > out.bmp </i>
-					</p>
-					<p>Saturation is controlled by interpolating the pixels between a gray-scale version of the original image and the original image.  The grayscale image is constructed form the pixel luminance.  Negative values inverts the image hue but keeps the luminance.  A factor of 0.0 outputs the calculated greyscale image, 1.0 preserves the original image, and negative values invert the colors.  Values between 0.0 and 1.0 make the image more gray, and values greater than 1.0 are extrapolated to increase the saturation.</p>
+					{{#with CSE190_1_desc.ChangeSaturation}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each saturation}}
+						{{#each CSE190_1_img.saturation}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="ChangeGamma">
-					<h4>Image::ChangeGamma</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -gamma [factor] < in.bmp > out.bmp </i>
-					</p>
-					<p>Gamma correction adjusts the color of each pixel of the image by the factor.  The factor must be a postitive number.  A factor of 1.0 preserves the original image, values greater than 1 brighten the image, and values less than 1 darken it. </p>
+					{{#with CSE190_1_desc.ChangeGamma}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each gamma}}
+						{{#each CSE190_1_img.gamma}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="Crop">
-					<h4>Image::Crop</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -crop [x] [y] [w] [h] < in.bmp > out.bmp </i>
-					</p>
-					<p>Cropping is done by selecting a rectangular section of the image at the given starting point up to the size specified.  x and y are the point to begin cropping from, and w and h are the size of the output cropped image.  The x value must be in the range 0 to width-1(left to right) and y must be in the range 0 to height -1 (top to bottom). All parameters must be postive.</p>
+					{{#with CSE190_1_desc.Crop}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each crop}}
+						{{#each CSE190_1_img.crop}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
@@ -165,43 +109,33 @@
 				<h3>Quantization and Dithering</h3>
 				<p>For all of the Quantization and Dithering methods the number of bits must be between 1 and 8.</p>
 				<div id="Quantize">
-					<h4>Image::Quantize</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -quantize [bits] < in.bmp > out.bmp </i>
-					</p>
-					<p>For each color channel in the image I first convert the value to a floating point number <i>p</i> between 0 and 1, then use <i>q = floor(p * b)</i>, where <i>b = 2^bits</i>.  I then convert back to the 0-255 range using <i>color = floor(255*q/(b-1))</i>.</p>
+					{{#with CSE190_1_desc.Quantize}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">		
-						{{#each quantize}}
+						{{#each CSE190_1_img.quantize}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="RandomDither">
-					<h4>Image::RandomDither</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -randomDither [bits] < in.bmp > out.bmp </i>
-					</p>
-					<p>I then added an option to add random noise to the quantizing function.  THe noise ranges from -0.5 to 0.5, and is added using <i>q = floor(p*b + noise)</i>.</p>
+					{{#with CSE190_1_desc.RandomDither}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">		
-						{{#each randomDither}}
+						{{#each CSE190_1_img.randomDither}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="FloydSteinbergDither">
-					<h4>Image::FloydSteinbergDither</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -FloydSteinbergDither [bits] < in.bmp > out.bmp </i>
-					</p>
-					<p>In this algorithm the error made during quantizing is diffused to other pixels later on using the given weights:</p>
-					<p>Right = 7/16, bottomleft = 3/16, bottom = 5/16, bottomright = 1/16.</p>
+					{{#with CSE190_1_desc.FloydSteinbergDither}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">		
-						{{#each FloydSteinbergDither}}
+						{{#each CSE190_1_img.FloydSteinbergDither}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
@@ -218,50 +152,39 @@
 				<p>To deal with this, I decided to use the reflection method instead.  The helper function <strong>int reflectImg (int max, int idx)</strong>, which reflects out of bounds points back into the image.</p>
 				<p>When I implemented edge detection, the helper function <strong>int reflectImg (int max, int idx)</strong>, created some errors on the border which I did not like.  To deal with this, I switched to a new helper function <strong>int validImg (int max, int idx)</strong> which instead only uses valid pixels in the image. </p>
 				<div class="row">
-					{{#each Edges}}
+					{{#each CSE190_1_img.Edges}}
 						{{> assignmentImg }}
 					{{/each}}
 				</div>
 
 				<div id="Blur">
-					<h4>Image::Blur</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -blur [width] < in.bmp > out.bmp </i>
-					</p>
-					<p>The blur kernel width parameter must be an odd integer.  A gaussian filter with the given width is used for discrete convolution with the image.  I set <i>sigma = floor(n/2.0)/2.0</i> as given in the assignment.</p>
-
+					{{#with CSE190_1_desc.Blur}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each Blur}}
+						{{#each CSE190_1_img.Blur}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="Sharpen">
-					<h4>Image::Sharpen</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -sharpen < in.bmp > out.bmp </i>
-					</p>
-					<p>I used the filter provided in the assignment writeup.</p>
-
+					{{#with CSE190_1_desc.Sharpen}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each Sharpen}}
+						{{#each CSE190_1_img.Sharpen}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="EdgeDetect">
-					<h4>Image::EdgeDetect</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -edgeDetect [threshold] < in.bmp > out.bmp </i>
-					</p>
-					<p>Edge detection using sobel filters</p>
+					{{#with CSE190_1_desc.EdgeDetect}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each EdgeDetect}}
+						{{#each CSE190_1_img.EdgeDetect}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
@@ -273,20 +196,17 @@
 				<h3>Antialiased Scale and Shift</h3>
 
 				<div id="Scale">
-					<h4>Image::Scale</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -sampling [type] -size [w] [h] < in.bmp > out.bmp </i>
-					</p>
-					<p>Nearest Neighbor:</p>
+					{{#with CSE190_1_desc.Scale}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each Scale1}}
+						{{#each CSE190_1_img.Scale1}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 					<p>Hat Filter: f(x) = 1 - |x|</p>
 					<div class="row">
-						{{#each Scale2}}
+						{{#each CSE190_1_img.Scale2}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
@@ -294,27 +214,24 @@
 					<p>f(0 <= |x| < 1) = (1/6)*(7|x|^3 - 12|x|^2 + 6/3)</p>
 					<p>f(1 <= |x| < 2) = (1/6)*((-7/3)|x|^3 + 12|x|^2 - 20|x| + 32/3)</p>
 					<div class="row">
-						{{#each Scale3}}
+						{{#each CSE190_1_img.Scale3}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>
 
 				<div id="Shift">
-					<h4>Image::Shift</h4>
-					<p>
-						<i> command line arguments: </br>
-						./image -shift [sx] [sy] < in.bmp >out.bmp </i>
-					</p>
-					<p>Nearest Neighbor:</p>
+					{{#with CSE190_1_desc.Shift}}
+						{{> assignmentDesc}}
+					{{/with}}
 					<div class="row">
-						{{#each Shift1}}
+						{{#each CSE190_1_img.Shift1}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 					<p>Hat Filter: f(x) = 1 - |x|</p>
 					<div class="row">
-						{{#each Shift2}}
+						{{#each CSE190_1_img.Shift2}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
@@ -322,24 +239,19 @@
 					<p>f(0 <= |x| < 1) = (1/6)*(7|x|^3 - 12|x|^2 + 6/3)</p>
 					<p>f(1 <= |x| < 2) = (1/6)*((-7/3)|x|^3 + 12|x|^2 - 20|x| + 32/3)</p>
 					<div class="row">
-						{{#each Shift3}}
+						{{#each CSE190_1_img.Shift3}}
 							{{> assignmentImg }}
 						{{/each}}
 					</div>
 				</div>				
 			<!-- end Antialiased Scale and Shift -->
 
-			<div id="funNonlinear" class="line"></div>
-				<h3>Fun nonlinear filters</h3>
-				<p>
-					<i> command line arguments: </br>
-					./image -fun < in.bmp >out.bmp </i>
-				</p>
-				<p> I decided to implement a swirl effect. I use the mitchell filter for anti-aliasing.  I searched for math equations for the swirl effect online and found several different ones.  All of these left black pixels where there were no image pixels to sample, but I instead used my sampling method which uses the wrapping method.  The function I chose to use to transform the pixels is <strong>newX = x*cos(angle) - y*sin(angle) +xcenter</strong> and <strong>newY = x*sin(angle) + y*cos(angle) + ycenter</strong> and <strong>r = (x*x + y*y)</strong> where angle is a function of r.
-				</p>
-
+			<div id="funNonLinear" class="line"></div>
+				{{#with CSE190_1_desc.funNonLinear}}
+					{{> assignmentDesc}}
+				{{/with}}
 				<div class="row">
-					{{#each Fun}}
+					{{#each CSE190_1_img.Fun}}
 						{{> assignmentImg }}
 					{{/each}}
 				</div>
@@ -351,11 +263,10 @@
 
 	</body>
 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<!--custom js files -->
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Latest compiled and minified JavaScript Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<script src="/js/portfolio.js"></script>
 </html>

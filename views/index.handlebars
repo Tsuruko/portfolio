@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -15,56 +16,11 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/portfolio.css">
 		<link rel="stylesheet" href="/css/sidebar.css">
-
 	</head>
+
 	<body>
-
 		<!-- Navigation Bar Holder -->
-		<nav id="navbar" class="sideBarContainer">
-			<div id="sideHeader" class="sidebar-header">
-				<h3>Monica Liu</h3>
-			</div>
-
-			<div id="topHeader" class="navbar-header">
-				<button id="menucollapse" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#optionsList" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Monica Liu</a>
-			</div>
-
-			<div id="optionsList">
-				<ul id="optionsListType" class="list-unstyled components">
-					<li class="menuOption active">
-						<a href="#content">Home</a>
-					</li>
-					<li class="menuOption">
-						<a href="#about">About</a>
-					</li>
-				<!--
-					<li class="menuOption">
-						<a href="#Work">Work Experience</a>
-					</li>
-				-->
-					<li class="menuOption">
-						<a id="subMenuToggle" href="#projects" data-toggle="collapse" data-target="#projSubMenu" aria-expanded="false">Projects</a>
-						<ul id="projSubMenu" class="collapse list-unstyled components">
-							<li class="subOption"><a href="#acg">Advanced Computer Graphics</a></li>
-							<li class="subOption"><a href="#bb">Battle Blocks</a></li>
-							<li class="subOption"><a href="#animation">Computer Animation</a></li>
-							<li class="subOption"><a href="#fa">FeelzApp</a></li>
-							<li class="subOption"><a href="#render">Photo-Realistic Rendering</a></li>
-							<li class="subOption lastli"><a href="#km">Kart Mania</a></li>
-						</ul>
-					</li>
-					<li class="menuOption">
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+		{{> navbar}}
 		<!-- End Navigation Bar Holder -->
 
 		<!-- Page Content Holder -->
@@ -108,7 +64,7 @@
 
 				<div class="mediaSpacing">
 					<a class="btn btn-primary" href="/downloads/CSE190_1.zip" role="button">Project 1 Download for MacOS</a>
-					<a class="btn btn-primary" href="/CSE190/Assignment1" role="button">Project 1 Report</a>
+					<a id="CSE190_1Link" class="btn btn-primary" href="/CSE190/Assignment1" role="button">Project 1 Report</a>
 					<a class="btn btn-primary" href="http://cseweb.ucsd.edu/~ravir/190/2015/assignment1.pdf" role="button" target="_blank">Assignment 1 Prompt</a>
 				</div>
 				{{#with projectImages.CSE190_2}}
@@ -190,7 +146,7 @@
 
 
 				<h3 id="km">Kart Mania</h3>
-				{{#with projectsList.CSE168}}
+				{{#with projectsList.CSE167}}
 					{{> project}}
 				{{/with}}
 

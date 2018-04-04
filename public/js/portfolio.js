@@ -21,6 +21,12 @@ function initializePage() {
 	$("#subMenuToggle").click(subMenuClick);
 
 	$(".btn").click(removeFocus);
+
+	//$("#menucollapse").click (test);
+}
+
+function test () {
+	//alert ("click");
 }
 
 /* ---------------------------------------------------
@@ -64,7 +70,6 @@ function activateSubItem () {
 function subMenuClick () {
 	subMenuClicked = true;
 }
-
 
 function removeFocus() {
 	$(this).blur();
